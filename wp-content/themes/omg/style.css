@@ -1,0 +1,16 @@
+/*
+THEME NAME: Omg blank theme
+THEME URI: http://www.omg.cl
+DESCRIPTION: Tema en blanco y con el css básico para comenzar a trabajar.
+VERSION: 1.0
+AUTHOR: <a href="http://www.omg.cl/">Clint.</a>
+AUTHOR URI:
+TAGS:
+*/
+
+/* Importo CSS desde la carpeta /css  */
+@import url('assets/css/form.css');
+@import url('assets/css/custom.css');
+@import url('assets/css/responsive.css');
+
+
