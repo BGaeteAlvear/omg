@@ -19,6 +19,7 @@ Template Name: About Us Page
             </div>
         </div>
     </section>
+
     <section class="py-5 my-4">
         <div class="container wow fadeIn"  data-wow-duration="2s">
             <div class="row">
