@@ -1333,3 +1333,13 @@ img.altalena-logo-omg {
 .navbar-white{
     background: white !important;
 }
+.black-velo {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}

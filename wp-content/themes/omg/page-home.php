@@ -11,6 +11,7 @@ Template Name: Home Page
             <div class="carousel-inner" role="listbox" >
 
                 <div class="carousel-item active ">
+                    <div class="black-velo"></div>
                     <img class="d-block w-100 cover" style="background-image:linear-gradient(rgba(0,0,0,2), rgba(0,0,0,2))" alt="omg" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-home-header.jpg" data-holder-rendered="true" style="margin-top: -90px;">
                 </div>
 
@@ -56,11 +57,11 @@ Template Name: Home Page
            </div>
 
            <script>
-               $('#menu-principal').hide();
+
                $(window).scroll(function(){
                    var scroll = $(window).scrollTop();
 
-                   console.log(scroll);
+                   // console.log( $('#midle-menu').position());
                    if(scroll < 500){
                        $('#midle-menu').show();
                        $('#menu-principal').hide();
