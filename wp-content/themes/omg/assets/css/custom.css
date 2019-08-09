@@ -1329,3 +1329,7 @@ img.altalena-logo-omg {
 .direction b{
     font-weight: 700;
 }
+
+.navbar-white{
+    background: white !important;
+}
