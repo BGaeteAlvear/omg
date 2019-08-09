@@ -5,206 +5,221 @@ Template Name: Products Private Labels
 ?>
 <?php get_header() ?>
 
-    <section>
-        <div class="row no-gutters">
-            <div class="col-md-12">
-                <div class="header-products-bg"
-                     style="background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)),url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/resourses/img2.jpg?h=382507266d1002eb9e7e127b3635f319);">
-                    <div class="p-5 mb-0 text-white" style="bottom:0;position:absolute;">
-                        <h2 class="extrabold font-100 pl-md-5 wow fadeIn"  data-wow-duration="2s">Products</h2>
+    <section class="private-label mb-5" style="margin-top: 15%">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="title-private-label-page blue f-300">PRIVATE <b class="f-700">LABEL</b></h1>
+                </div>
+                <div class="col-md-6" style="bottom: 0%">
+                    <p class="content-p p-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+                        volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                        ullamcorper suscipit lobortis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-ancla my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 px-3">
+                    <a href="" class="btn btn-blue btn-round active">SuperFood Consumer</a>
+                </div>
+                <div class="col-md-3 px-3">
+                    <a href="" class="btn btn-blue btn-round">As easy as 1.2.3.4</a>
+                </div>
+                <div class="col-md-3 px-3">
+                    <a href="" class="btn btn-blue btn-round">Our Products</a>
+                </div>
+                <div class="col-md-3 px-3">
+                    <a href="" class="btn btn-blue btn-round">Packaging</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="superfood-consumer my-5">
+        <div class="container">
+            <div class="header-bg pb-5" style="background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)),url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/superfood-consumer.jpg);">
+                <div class="p-5 col-12 mb-0 text-white text-center pb-5" style="bottom:0;position:absolute;">
+                    <div class="pl-md-5 text-center col-10 offset-md-1">
+                        <h3 class="title-54 white f-300">SUPERFOODS <b class="f-700">CONSUMER</b></h3>
+                        <p class="content-p white text-justify px-5">Consumers of Superfoods are constantly seeking new and better ways to incorporate healthy, nutrient-dense products into their daily lives. OMG Superfoods understands this mentality and is able to partner with retailers to meet customers demands.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
-        <div class="row no-gutters">
 
-            <?php
-            $taxonomy = 'category';
-            $terms = get_terms($taxonomy);
-
-            if ($terms && !is_wp_error($terms)) :
-                ?>
-
-                <?php foreach ($terms as $term) { ?>
-
-                    <?php if($term->slug !='other-products'){ ?>
-                        <?php $catIMGId = get_field('image', 'term_' . $term->term_id); ?>
-
-                        <div class="col-125 wow fadeIn"  data-wow-duration="2s">
-                            <div class="cat-gallery"
-                                 style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),url(<?php echo $catIMGId ?>">
-                                <div class="content-box-product">
-                                    <h3 class="bold text-left title-product-box"><?php echo $term->name; ?></h3>
-                                    <p class="mt-3 text-center pbutton">
-                                        <button class="btn btn-primary btn-round px-4"
-                                                onclick="showBox('<?php echo $term->slug; ?>')">SEE MORE
-                                        </button>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--                        <li><a href="--><?php //echo get_term_link($term->slug, $taxonomy); ?><!--">--><?php //echo $term->name; ?><!--</a></li>-->
-
-                     <?php } ?>
-                <?php } ?>
-
-                <?php foreach ($terms as $term) { ?>
-
-                <?php if($term->slug =='other-products'){ ?>
-                    <?php $catIMGId = get_field('image', 'term_' . $term->term_id); ?>
-
-                    <div class="col-125 wow fadeIn"  data-wow-duration="2s">
-                        <div class="cat-gallery"
-                             style="background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),url(<?php echo $catIMGId ?>">
-                            <div class="content-box-product">
-                                <h3 class="bold text-left title-product-box"><?php echo $term->name; ?></h3>
-                                <p class="mt-3 text-center pbutton">
-                                    <button class="btn btn-primary btn-round px-4"
-                                            onclick="showBox('<?php echo $term->slug; ?>')">SEE MORE
-                                    </button>
-                                </p>
-                            </div>
-                        </div>
+    <section class="product-category my-5" style="margin-top: 8%">
+        <div class="container text-center">
+            <h3 class="title-54 f-300 blue pt-5">OUR PRODUCTS IN <br><b class="f-700">YOUR CATEGORIES</b></h3>
+            <div class="row py-3">
+                <div class="col px-2">
+                    <div class="box-category zoom" style="background-color: #874C66">
+                        <h5>Vitamins & Supplements</h5>
                     </div>
-                    <!--                        <li><a href="--><?php //echo get_term_link($term->slug, $taxonomy); ?><!--">--><?php //echo $term->name; ?><!--</a></li>-->
-
-                <?php } ?>
-                <!--                        <li><a href="--><?php //echo get_term_link($term->slug, $taxonomy); ?><!--">--><?php //echo $term->name; ?><!--</a></li>-->
-            <?php } ?>
-
-            <?php endif; ?>
-
+                </div>
+                <div class="col px-2">
+                    <div class="box-category zoom" style="background-color: #689A54">
+                       <h5>Health & Wellness</h5>
+                    </div>
+                </div>
+                <div class="col px-2">
+                    <div class="box-category zoom" style="background-color: #B84652;">
+                        <h5>Baking & Cooking</h5>
+                    </div>
+                </div>
+                <div class="col px-2">
+                    <div class="box-category zoom" style="background-color: #C88044">
+                        <h5>Seeds & Grains</h5>
+                    </div>
+                </div>
+                <div class="col px-2">
+                    <div class="box-category zoom" style="background-color: #4988AD">
+                        <h5>Herbs & Spices</h5>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="py-5 my-4">
-        <div class="container" id="products">
-            <?php
-            if ($terms && !is_wp_error($terms)) :
-                ?>
 
-                <?php foreach ($terms as $term) { ?>
+    <section class="bg-blue contact-form no-gutters mb-5">
+        <div class="container p-5">
+            <div class="row text-left">
+            </div>
+        </div>
+    </section>
 
-                <div class="row box-cats" id="box_<?php echo $term->slug; ?>" style="display: none;"
-                     data-slug="<?php echo $term->slug; ?>">
-                    <div class="col-md-12">
-                        <h1 class="main-color font-75 black  wow fadeIn"  data-wow-duration="2s"><?php echo $term->name; ?></h1>
+    <section class="our-products">
+        <div class="container text-center">
+            <h3 class="title-54 f-300 blue text-center mb-4">
+                OUR <b class="f-700">PRODUCTS</b>
+            </h3>
+            <div class="row">
+                <div class="accordion col-12 py-5" id="accordionExample">
+                    <div class="card col-12 pb-2">
+                        <div class="card-header" id="headingOne" style="background-color: #3b9743">
+                            <h2 class="mb-0 white f-700">
+                                <button class="btn btn-link pull-left white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Collapsible Group Item #1
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="row py-5">
-
-                            <?php
-                            $posts_array = get_posts(
-                                array(
-                                    'posts_per_page' => -1,
-                                    'post_type' => 'products',
-                                    'tax_query' => array(
-                                        array(
-                                            'taxonomy' => 'category',
-                                            'field' => 'term_id',
-                                            'terms' => $term->term_id,
-                                        )
-                                    )
-                                )
-                            );
-                            ?>
-
-                            <?php foreach ($posts_array as $post) { ?>
-
-                                <?php
-//                                if (has_post_thumbnail($post->ID)) {
-//                                    $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
-//                                }
-
-                                $fields = get_fields($post->ID);
-                               // echo var_dump($post);
-                                ?>
-
-                                <div class="col-md-3  wow fadeIn"  data-wow-duration="2s">
-                                    <div class="product-box" style="position: relative;">
-                                        <div class="detail-product-hover">
-                                            <a class="btn btn-primary btn-round" style="margin: auto;" href="<?php echo get_permalink($post->ID);?>">SEE MORE</a>
-                                        </div>
-                                        <img  src="<?php echo $fields['image']; ?>">
-                                    </div>
-                                    <p class="p-2 black font-26"><?php echo $post->post_title; ?></p>
-                                </div>
-                            <?php } ?>
-
-                            <!--                            <div class="col-md-3">-->
-                            <!--                                <div class="product-box"><img-->
-                            <!--                                            src="-->
-                            <?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/resourses/g4.jpg?h=6a9fa2d7bac4bc25c9c809bbb0dd9330">-->
-                            <!--                                </div>-->
-                            <!--                                <p class="p-2 black font-26">Coconut Shredded</p>-->
-                            <!--                            </div>-->
-                            <!--                            <div class="col-md-3">-->
-                            <!--                                <div class="product-box"><img-->
-                            <!--                                            src="-->
-                            <?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/resourses/g2.jpg?h=63fe5fc1df892269e0b487724091c736">-->
-                            <!--                                </div>-->
-                            <!--                                <p class="p-2 black font-26">Coconut Shredded</p>-->
-                            <!--                            </div>-->
-                            <!--                            <div class="col-md-3">-->
-                            <!--                                <div class="product-box"><img-->
-                            <!--                                            src="-->
-                            <?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/resourses/g1.jpg?h=cd12b9910172a0e1d89d4787780f8521">-->
-                            <!--                                </div>-->
-                            <!--                                <p class="p-2 black font-26"><strong>Coconut Shredded</strong><br><strong>Organic</strong>-->
-                            <!--                                </p>-->
-                            <!--                            </div>-->
-                            <!--                            <div class="col-md-3">-->
-                            <!--                                <div class="product-box"><img-->
-                            <!--                                            src="-->
-                            <?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/resourses/g3.jpg?h=63fe5fc1df892269e0b487724091c736">-->
-                            <!--                                </div>-->
-                            <!--                                <p class="p-2 black font-26">Coconut Shredded</p>-->
-                            <!--                            </div>-->
+                    <div class="card col-12 pb-2">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Collapsible Group Item #2
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-12 pb-2">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Collapsible Group Item #3
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
                         </div>
                     </div>
                 </div>
-            <?php } ?>
 
-            <?php endif; ?>
-            <!--            <div class="row">-->
-            <!--                <div class="col-md-12">-->
-            <!--                    <h1 class="main-color font-75 black">Coconut Products</h1>-->
-            <!--                </div>-->
-            <!--                <div class="col-md-12">-->
-            <!--                    <div class="row py-5">-->
-            <!--                        <div class="col-md-3">-->
-            <!--                            <div class="product-box"><img-->
-            <!--                                        src="-->
-            <?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/resourses/g4.jpg?h=6a9fa2d7bac4bc25c9c809bbb0dd9330">-->
-            <!--                            </div>-->
-            <!--                            <p class="p-2 black font-26">Coconut Shredded</p>-->
-            <!--                        </div>-->
-            <!--                        <div class="col-md-3">-->
-            <!--                            <div class="product-box"><img-->
-            <!--                                        src="-->
-            <?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/resourses/g2.jpg?h=63fe5fc1df892269e0b487724091c736">-->
-            <!--                            </div>-->
-            <!--                            <p class="p-2 black font-26">Coconut Shredded</p>-->
-            <!--                        </div>-->
-            <!--                        <div class="col-md-3">-->
-            <!--                            <div class="product-box"><img-->
-            <!--                                        src="-->
-            <?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/resourses/g1.jpg?h=cd12b9910172a0e1d89d4787780f8521">-->
-            <!--                            </div>-->
-            <!--                            <p class="p-2 black font-26"><strong>Coconut Shredded</strong><br><strong>Organic</strong>-->
-            <!--                            </p>-->
-            <!--                        </div>-->
-            <!--                        <div class="col-md-3">-->
-            <!--                            <div class="product-box"><img-->
-            <!--                                        src="-->
-            <?php //echo get_stylesheet_directory_uri(); ?><!--/assets/img/resourses/g3.jpg?h=63fe5fc1df892269e0b487724091c736">-->
-            <!--                            </div>-->
-            <!--                            <p class="p-2 black font-26">Coconut Shredded</p>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-sky-blue contact-form no-gutters mb-5">
+        <div class="container p-5">
+            <div class="text-center white">
+                <h3 class="title-54 f-300 text-center mb-4">
+                    PACKAGING
+                </h3>
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg1.png"" alt="">
+                        <h5 class="description-paking white f-300"> <b>STAND-UP GUSSETED POUCH </b>CUSTOM PRINTED </h5>
+                    </div>
+                    <div class="col-md-2">
+                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg2.png"" alt="">
+                        <h5 class="description-paking white f-300"> <b>STAND-UP GUSSETED POUCH </b>GENERIC WITH LABEL </h5>
+                    </div>
+                    <div class="col-md-2 pl-5">
+                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg3.png"" alt="">
+                        <h5 class="description-paking white f-300"> <b>STICK <br> PACK </b></h5>
+                    </div>
+                    <div class="col-md-2 pl-5 ">
+                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg4.png"" alt="">
+                        <h5 class="description-paking white f-300"> <b>PLASTIC <br> TUBES</b> </h5>
+                    </div>
+                    <div class="col-md-2">
+                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg5.png"" alt="">
+                        <h5 class="description-paking white f-300"> <b>PET <br>CANISTER</b> </h5>
+                    </div>
+                    <div class="col-md-2">
+                        <img class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg6.png"" alt="">
+                        <h5 class="description-paking white f-300"> <b>RETAIL <br>READY TRAY </b></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certifications">
+        <div class="container p-5">
+            <div class="row ">
+                <div class="col-12 text-center">
+                    <h3 class="title-54 f-300 text-center mb-4">
+                        CERTIFICATIONS
+                    </h3>
+                    <div class="col-md-8 offset-md-2 text-center mb-5">
+                        <p class="content-p text-justify">Every OMG product is certified USDA Organic and Kosher.  We are able to expand to offer Project non-GMO Certification as well as other certifications that are required by your consumers.  All of our products are produced in GFSI audited facilities.</p>
+                    </div>
+                    <div class="col-md-12 text-center pb-5">
+                        <img style="width: 60%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/certifications.png" alt="certifications">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--contact -->
+    <section class="bg-blue contact-form no-gutters mb-5">
+        <div class="container p-5">
+            <div class="row text-left">
+                <h3 class=" title-private-label white f-300 mt-2">CONTACT <b class="f-700">US</b></h3>
+            </div>
+            <div class="no-gutters"  >
+                <div class="my-5">
+                    <?php the_content() ?>
+                    <?php echo do_shortcode( '[contact-form-7 id="5" title="Contact Form"]' ); ?>
+                </div>
+            </div>
         </div>
     </section>
 

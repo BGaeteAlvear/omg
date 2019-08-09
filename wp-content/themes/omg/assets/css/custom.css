@@ -358,11 +358,9 @@ input:focus, textarea:focus {
 }
 
 .btn {
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 3px;
+    font-weight: 700;
     padding: 15px 40px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .btn-primary {
@@ -1268,6 +1266,10 @@ span.wpcf7-not-valid-tip {
     color: #0E3450!important;
 }
 
+.bg-sky-blue{
+    background-color: #4988AD!important;
+}
+
 .bg-green{
     background-color: #689A54!important;
 }
@@ -1348,4 +1350,58 @@ img.altalena-logo-omg {
 
 .border-5{
     border-radius: 10px;
+}
+
+.title-private-label-page{
+    font-size: 104px;
+    line-height: 1;
+}
+
+a.btn.btn-blue.btn-round{
+    border: 2px solid;
+    width: 100%;
+    text-align: center;
+}
+
+a.btn.btn-blue.btn-round.active{
+    border: 2px solid #0E3450;
+    background-color: #0E3450;
+    color: white;
+}
+
+a.btn.btn-blue.btn-round:hover{
+    border: 2px solid #0E3450;
+    background-color: #0E3450;
+    color: white;
+}
+
+p.content-p.p-3 {
+    position: relative;
+    bottom: -95px!important;
+}
+
+.box-category{
+    height: 300px;
+}
+
+.box-category h5{
+    position: relative;
+    padding: 2%;
+    bottom: -65%;
+    color: white;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.description-paking{
+    font-size: 15px;
+}
+
+img.img-paking {
+    height: 63%;
+    padding-bottom: 3%;
+}
+
+.description-paking b{
+    font-weight: 700;
 }
