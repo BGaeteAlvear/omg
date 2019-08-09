@@ -1334,6 +1334,10 @@ img.altalena-logo-omg {
     font-weight: 700;
 }
 
+.navbar-white{
+    background: white !important;
+}
+
 .title-about-us{
     font-size: 104px;
 }

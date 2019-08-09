@@ -36,8 +36,42 @@ Template Name: Home Page
                            A <b>SUPER LIFE</b></h3>
                    </div>
 
+
+                       <div id="midle-menu" style="max-width: 800px;" class="mx-auto py-4">
+                               <?php
+
+                               wp_nav_menu( array(
+                                   'theme_location'    => 'primary',
+                                   'depth'             => 2,
+                                   'container'         => 'div',
+//                            'container_class'   => 'container ',
+//                           'container_id'      => 'bs-example-navbar-collapse-1',
+                                   'menu_class'        => 'nav nav-fill ml-auto ',
+                                   'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                                   'walker'            => new WP_Bootstrap_Navwalker(),
+                               ) );
+                               ?>
+                       </div>
                </div>
            </div>
+
+           <script>
+               $('#menu-principal').hide();
+               $(window).scroll(function(){
+                   var scroll = $(window).scrollTop();
+
+                   console.log(scroll);
+                   if(scroll < 500){
+                       $('#midle-menu').show();
+                       $('#menu-principal').hide();
+                       $('.fixed-top').removeClass('navbar-white');
+                   } else{
+                       $('#midle-menu').hide();
+                       $('#menu-principal').slideDown();
+                       $('.fixed-top').addClass('navbar-white');
+                   }
+               });
+           </script>
 
        </div>
     </section>

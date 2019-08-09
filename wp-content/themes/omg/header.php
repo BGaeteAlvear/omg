@@ -65,7 +65,7 @@
             <span id="error_search" class="help-block"></span>
         </div>
     </div>
-    <div id="menu-principal" class="navbar navbar-dark navbar-expand-md bg-dark navigation-clean transparent">
+    <div id="menu-principal" class="navbar navbar-dark navbar-expand-md bg-dark navigation-clean bg-white fixed-top">
         <div class="container">
             <a class="navbar-brand" href="<?php echo get_home_url() ?>">
                 <?php
