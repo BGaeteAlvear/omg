@@ -180,16 +180,16 @@ Template Name: Products Private Labels
                                                                     if ( $type_array ):
                                                                         foreach ( $type_array as $type_item ): ?>
                                                                             <?php if ($type_item == 'organic'): ?>
-                                                                            <td> <?php echo $type_item ;?><i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
+                                                                            <td> <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
                                                                             <?php endif; ?>
                                                                             <?php if ($type_item == 'kosher'): ?>
-                                                                                <td> <?php echo $type_item ;?><i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
+                                                                                <td> <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
                                                                             <?php endif; ?>
                                                                             <?php if ($type_item == 'vegan'): ?>
-                                                                                <td> <?php echo $type_item ;?><i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
+                                                                                <td> <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
                                                                             <?php endif; ?>
                                                                             <?php if ($type_item == 'raw'): ?>
-                                                                                <td> <?php echo $type_item ;?><i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
+                                                                                <td> <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
                                                                             <?php endif; ?>
                                                                         <?php endforeach;
                                                                     endif; ?>
@@ -309,6 +309,22 @@ Template Name: Products Private Labels
                 $("html, body").animate({ scrollTop: header}, 1000);
             }
         });
+
+        $(function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
 
     </script>
 <?php get_footer() ?>
