@@ -22,8 +22,8 @@ Template Name: Products Private Labels
         </div>
     </section>
 
-    <section class="menu-ancla my-5">
-        <div class="container">
+    <section id="sticky-buttons" class="menu-ancla my-5 sticky-buttons">
+        <div class="container px-5">
             <div class="row">
                 <div class="col-md-3 px-3">
                     <a href="#superfoods" class="btn btn-blue btn-round active">SuperFood Consumer</a>
@@ -40,6 +40,26 @@ Template Name: Products Private Labels
             </div>
         </div>
     </section>
+
+    <script>
+
+
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            var position = $('#sticky-buttons').position();
+             // console.log( position);
+            if (position.top > 600 && position.top < 1829) {
+                $('#sticky-buttons').addClass('on-sticky-buttons');
+            } else {
+                $('#sticky-buttons').removeClass('on-sticky-buttons');
+            }
+            if(position.top > 1829){
+                $('#sticky-buttons').addClass('sticky-buttons-trans');
+            }else if(position.top < 2000){
+                $('#sticky-buttons').removeClass('sticky-buttons-trans');
+            }
+        });
+    </script>
 
     <section class="superfood-consumer my-5" id="superfoods">
         <div class="container">
