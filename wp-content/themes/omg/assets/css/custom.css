@@ -1262,14 +1262,6 @@ span.wpcf7-not-valid-tip {
     color: #689A54!important;
 }
 
-.blue{
-    color: #0E3450!important;
-}
-
-.bg-sky-blue{
-    background-color: #4988AD!important;
-}
-
 .bg-green{
     background-color: #689A54!important;
 }
@@ -1339,6 +1331,17 @@ img.altalena-logo-omg {
 .navbar-white{
     background: white !important;
 }
+.black-velo {
+    height: 80%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,8), rgba(0,0,0,0));
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
 
 .title-about-us{
     font-size: 104px;
