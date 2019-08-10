@@ -47,7 +47,7 @@ Template Name: Products Private Labels
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
             var position = $('#sticky-buttons').position();
-             console.log( position);
+             // console.log( position);
             if (position.top > 600 && position.top < 1829) {
                 $('#sticky-buttons').addClass('on-sticky-buttons');
             } else {
