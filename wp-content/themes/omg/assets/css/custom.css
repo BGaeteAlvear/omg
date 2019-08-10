@@ -1432,3 +1432,32 @@ table.table.table-products tr:nth-child(even) {
 .card-body {
     padding: 1.05rem 0;
 }
+
+.sticky-buttons{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 100px;
+    z-index: 99999;
+    transition: al .2s ease-in-out;
+}
+
+
+.on-sticky-buttons .btn-blue{
+    background: white !important;
+    border-color: white !important;
+    color: #0E3450 !important;
+}
+.on-sticky-buttons .btn-blue.active{
+    background: #0E3450!important;
+    border-color: #0E3450!important;
+    color: white!important;
+}
+.on-sticky-buttons .btn-blue:hover{
+    background: #0E3450!important;
+    border-color: #0E3450!important;
+    color: white!important;
+}
+
+.sticky-buttons-trans{
+    opacity: 0;
+}
