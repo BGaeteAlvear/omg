@@ -1361,6 +1361,7 @@ a.btn.btn-blue.btn-round{
     border: 2px solid;
     width: 100%;
     text-align: center;
+    padding: 9px 40px;
 }
 
 a.btn.btn-blue.btn-round.active{
