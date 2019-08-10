@@ -26,22 +26,22 @@ Template Name: Products Private Labels
         <div class="container">
             <div class="row">
                 <div class="col-md-3 px-3">
-                    <a href="" class="btn btn-blue btn-round active">SuperFood Consumer</a>
+                    <a href="#superfoods" class="btn btn-blue btn-round active">SuperFood Consumer</a>
                 </div>
                 <div class="col-md-3 px-3">
-                    <a href="" class="btn btn-blue btn-round">As easy as 1.2.3.4</a>
+                    <a href="#as-easy" class="btn btn-blue btn-round">As easy as 1.2.3.4</a>
                 </div>
                 <div class="col-md-3 px-3">
-                    <a href="" class="btn btn-blue btn-round">Our Products</a>
+                    <a href="#our-products" class="btn btn-blue btn-round">Our Products</a>
                 </div>
                 <div class="col-md-3 px-3">
-                    <a href="" class="btn btn-blue btn-round">Packaging</a>
+                    <a href="#packaging" class="btn btn-blue btn-round">Packaging</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="superfood-consumer my-5">
+    <section class="superfood-consumer my-5" id="superfoods">
         <div class="container">
             <div class="header-bg pb-5" style="background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)),url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/superfood-consumer.jpg);">
                 <div class="p-5 col-12 mb-0 text-white text-center pb-5" style="bottom:0;position:absolute;">
@@ -87,14 +87,14 @@ Template Name: Products Private Labels
         </div>
     </section>
 
-    <section class="bg-blue contact-form no-gutters mb-5">
+    <section class="bg-blue contact-form no-gutters mb-5" id="as-easy">
         <div class="container p-5">
             <div class="row text-left">
             </div>
         </div>
     </section>
 
-    <section class="our-products">
+    <section class="our-products" id="our-products">
         <div class="container text-center">
             <h3 class="title-54 f-300 blue text-center mb-4">
                 OUR <b class="f-700">PRODUCTS</b>
@@ -102,20 +102,80 @@ Template Name: Products Private Labels
             <div class="row">
                 <div class="accordion col-12 py-5" id="accordionExample">
                     <div class="card col-12 pb-2">
-                        <div class="card-header" id="headingOne" style="background-color: #3b9743">
-                            <h2 class="mb-0 white f-700">
-                                <button class="btn btn-link pull-left white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Collapsible Group Item #1
-                                </button>
-                            </h2>
-                        </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
+                        <?php
+                        $taxonomy = 'category';
+                        $terms = get_terms($taxonomy);
+
+                        if ($terms && !is_wp_error($terms)) :
+                        ?>
+
+                            <?php foreach ($terms as $term) { ?>
+
+                                <?php if($term->slug !='other-products'){ ?>
+
+                                    <div class="card-header" id="headingOne" style="background-color: <?php $catIMGId = get_field('color', 'term_' . $term->term_id); ?>">
+                                        <h2 class="mb-0 white f-700">
+                                            <button class="btn btn-link pull-left white" type="button" data-toggle="collapse" data-target="#elem-1" aria-expanded="true" aria-controls="elem-1">
+                                                Collapsible Group Item #1
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="elem-1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <table class="table table-products px-0">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">PRODUCTS</th>
+                                                    <th scope="col">COUNTRY OF ORIGIN</th>
+                                                    <th scope="col">ORGANIC</th>
+                                                    <th scope="col">KOSHER</th>
+                                                    <th scope="col">VEGAN</th>
+                                                    <th scope="col">RAW</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                            <?php } ?>
+                        <?php } ?>
+                    <?php endif; ?>
                     <div class="card col-12 pb-2">
                         <div class="card-header" id="headingTwo">
                             <h2 class="mb-0">
@@ -145,12 +205,11 @@ Template Name: Products Private Labels
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="bg-sky-blue contact-form no-gutters mb-5">
+    <section class="bg-sky-blue contact-form no-gutters mb-5" id="packaging">
         <div class="container p-5">
             <div class="text-center white">
                 <h3 class="title-54 f-300 text-center mb-4">

@@ -1405,3 +1405,26 @@ img.img-paking {
 .description-paking b{
     font-weight: 700;
 }
+
+table.table.table-products {
+    border: none;
+}
+
+table.table.table-products th:nth-child(n) {
+   background-color: #e4e9ef;
+    border: none;
+}
+
+table.table.table-products tr td:nth-child(n) {
+    padding: 8px;
+    font-weight: 300;
+}
+
+table.table.table-products tr:nth-child(even) {
+    background-color: #e4e9ef;
+    border: none;
+}
+
+.card-body {
+    padding: 1.05rem 0;
+}
