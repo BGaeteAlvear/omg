@@ -358,11 +358,9 @@ input:focus, textarea:focus {
 }
 
 .btn {
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 3px;
+    font-weight: 700;
     padding: 15px 40px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .btn-primary {
@@ -1342,4 +1340,94 @@ img.altalena-logo-omg {
     left: 0;
     top: 0;
     bottom: 0;
+}
+
+
+.title-about-us{
+    font-size: 104px;
+}
+
+.title-54{
+    font-size: 54px;
+}
+
+.border-5{
+    border-radius: 10px;
+}
+
+.title-private-label-page{
+    font-size: 104px;
+    line-height: 1;
+}
+
+a.btn.btn-blue.btn-round{
+    border: 2px solid;
+    width: 100%;
+    text-align: center;
+}
+
+a.btn.btn-blue.btn-round.active{
+    border: 2px solid #0E3450;
+    background-color: #0E3450;
+    color: white;
+}
+
+a.btn.btn-blue.btn-round:hover{
+    border: 2px solid #0E3450;
+    background-color: #0E3450;
+    color: white;
+}
+
+p.content-p.p-3 {
+    position: relative;
+    bottom: -95px!important;
+}
+
+.box-category{
+    height: 300px;
+}
+
+.box-category h5{
+    position: relative;
+    padding: 2%;
+    bottom: -65%;
+    color: white;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.description-paking{
+    font-size: 15px;
+}
+
+img.img-paking {
+    height: 63%;
+    padding-bottom: 3%;
+}
+
+.description-paking b{
+    font-weight: 700;
+}
+
+table.table.table-products {
+    border: none;
+}
+
+table.table.table-products th:nth-child(n) {
+   background-color: #e4e9ef;
+    border: none;
+}
+
+table.table.table-products tr td:nth-child(n) {
+    padding: 8px;
+    font-weight: 300;
+}
+
+table.table.table-products tr:nth-child(even) {
+    background-color: #e4e9ef;
+    border: none;
+}
+
+.card-body {
+    padding: 1.05rem 0;
 }

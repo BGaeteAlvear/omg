@@ -6,50 +6,72 @@ Template Name: About Us Page
 <?php get_header() ?>
 
 
-    <section>
-        <div class="row no-gutters">
-            <div class="col-md-12">
-                <?php if ( get_field( 'image_header' ) ) { ?>
-                <div class="header-bg" style="background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)),url(<?php the_field( 'image_header' ); ?>);">
-                    <?php } ?>
-                    <div class="p-5 mb-0 text-white" style="bottom:0;position:absolute;">
-                        <h2 class="extrabold font-100 pl-md-5 wow fadeIn"  data-wow-duration="2s">About Us</h2>
-                    </div>
+    <section class="about-us mb-5" style="margin-top: 15%">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="title-about-us blue f-300">ABOUT <b class="f-700">US</b></h1>
+                </div>
+                <div class="col-md-6">
+                    <p class="content-p p-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+                        volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                        ullamcorper suscipit lobortis.</p>
+                </div>
+                <div class="col-md-6 p-4 mt-4 text-center">
+                    <img style="clip-path: circle(50% at 50% 50%); width: 65%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-about-us.jpg" alt="">
+                </div>
+                <div class="col-md-6 " style="margin-top: 9%">
+                    <h3 class="f-300 blue title-54">EXPERISE</h3>
+                    <p class="content-p">Headquartered in Los Angeles, California. OMG Superfoods
+                        specializes in sourcing and manufacturing Organic Superfoods. We
+                        began business in 2010 as the leading importer of Maqui Berry
+                        from Chile and have grown by partnering with national and regional
+                        retailers to successfully launch products in over 10,000 points of
+                        sale in the US market.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-5 my-4">
-        <div class="container wow fadeIn"  data-wow-duration="2s">
-            <div class="row">
-                <div class="col-sm-10 offset-1">
-                    <p><?php the_field( 'about_us' ); ?></p>
+    <section class="brand-about-us">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-8" style="padding-top:8%">
+                    <div class="border-5 bg-green white p-5 ">
+                        <h3 class="white f-300 title-54 pl-2 pb-3">INNOVATION</h3>
+
+                        <p class="content-p white col-8 no-gutters">
+                            At OMG Superfoods, we stay at the forefront of new
+                            trends and have the ability to rapidly offer new and
+                            innovative products to our clients.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img  class="img-brand-about-us pull-right" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brand-about-us.png" alt="">
                 </div>
             </div>
+
         </div>
+
     </section>
-    <section class="proposition-bg">
-        <div class="p-5">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-md-12">
-                        <h2 class="text-white text-center light font-36 py-5">Our value proposition&nbsp;<span class="semibold">is simple</span></h2>
-                        <div class="row px-md-4 wow fadeIn"  data-wow-duration="2s">
-                            <div class="col-md-4 text-white"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/resourses/icon1-p2.svg?h=b808d146aba35c3ef5d451634abdb91e" style="width:120px;">
-                                <h1 class="my-4">Quality</h1>
-                                <p>We work alongside our suppliers to ensure that we deliver premium ingredients that are ethically sourced form organic farms.</p>
-                            </div>
-                            <div class="col-md-4 text-white"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/resourses/icon2-p2.svg?h=7fc031742467c8a3bfa674ff3b338623" style="width:120px;">
-                                <h1 class="my-4">Pricing</h1>
-                                <p>Direct sourcing allows us to offer competitive pricing.</p>
-                            </div>
-                            <div class="col-md-4 text-white"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/resourses/icon3-p2.svg?h=19f473c38ca685b8a33814a944ba6a2a" style="width:120px;">
-                                <h1 class="my-4">Customer Service</h1>
-                                <p>One of our ingredient specialists will assist you in every step of your purchasing process.</p>
-                            </div>
-                        </div>
-                    </div>
+
+    <section class="about-us mb-5">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6 p-4 mt-4 text-center">
+                    <img style="clip-path: circle(50% at 50% 50%); width: 65%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-about-us-2GIT.jpg" alt="">
+                </div>
+                <div class="col-md-6 " style="margin-top: 9%">
+                    <h3 class="f-300 blue title-54">DIRECT SOURCING</h3>
+                    <p class="content-p">We cultivate direct and sustainable sourcing relationships with
+                        farmers across the globe, including Peru, India, Mexico, Chile, and
+                        others. This ensures we are able to offer a consistent supply of the
+                        highest quality ingredients at competitive prices.</p>
                 </div>
             </div>
         </div>
