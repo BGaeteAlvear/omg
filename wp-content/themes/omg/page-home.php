@@ -39,8 +39,7 @@ Template Name: Home Page
                     <img style="width: 120px; margin-top: -100px;"
                          src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/omg-home-logo.svg" alt="">
                     <div class="text-header" style="color:white;">
-                        <h3>WELCOLME TO <br>
-                            A <b>SUPER LIFE</b></h3>
+                        <h3>WELCOLME TO <br>A <b>SUPER LIFE</b></h3>
                     </div>
 
 
@@ -89,42 +88,60 @@ Template Name: Home Page
     <section class="no-gutters meet-omg mt-5 p-5 mb-5">
         <div class="container">
             <div class="row">
+
                 <div class="col-md-5">
-                    <h3 class="meet-omg-title">Meet OMG! <br>
+                    <h3 class="meet-omg-title blue">Meet OMG! <br>
                         <b>Food Company</b></h3>
                 </div>
-                <div class="col-md-7 px-5">
-                    <p class="content-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                        quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                        consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-                        consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                        dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-                        facilisi.</p>
-
-                    <a href="#" class="btn btn-primary btn-lg btn-round mt-5">ALL PRODUCTS</a>
-
+                <div class="col-md-7 px-5 content-product-img">
+                    <?php if ( have_rows( 'meet_omg!_food_company' ) ) : ?>
+                        <?php while ( have_rows( 'meet_omg!_food_company' ) ) : the_row(); ?>
+                            <p class="content-p"><?php the_sub_field( 'meet_omg!_food_company' ); ?></p>
+                            <?php $buttom_all_products = get_sub_field( 'buttom_all_products' ); ?>
+                            <?php if ( $buttom_all_products ) { ?>
+                                <a class="btn btn-primary btn-lg btn-round mt-5" href="<?php echo $buttom_all_products; ?>">ALL PRODUCTS</a>
+                            <?php } ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="our-brand mt-4 mb-5">
-        <div class="container text-center">
-            <h3 class="title-omg-brands-home">OMG! <b>BRANDS</b></h3>
+        <div class="container">
+            <h3 class="title-omg-brands-home blue">OMG! <b>BRANDS</b></h3>
             <div class="row">
-                <div class="col-md-4 p-4">
-                    <img style="width: 100%;"
-                         src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brand-1.jpg" alt="">
-                </div>
-                <div class="col-md-4 p-4">
-                    <img style="width: 100%;"
-                         src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brand-2.jpg" alt="">
-                </div>
-                <div class="col-md-4 p-4">
-                    <img style="width: 100%;"
-                         src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brand-3.jpg" alt="">
-                </div>
+
+                <?php if ( have_rows( 'omg_brands' ) ) : ?>
+                    <?php while ( have_rows( 'omg_brands' ) ) : the_row(); ?>
+                        <?php if ( have_rows( 'brand' ) ) : ?>
+                            <?php while ( have_rows( 'brand' ) ) : the_row(); ?>
+
+                                <div class="col-6 col-md-4 mb-4 mb-md-0 last-news">
+                                    <div class="black-velo-in-col fix-bug"></div>
+                                    <div class="last-news-content">
+                                        <?php if ( get_sub_field( 'logo' ) ) { ?>
+                                        <div class="last-news-date font-9 uppercase">
+                                            <img src="<?php the_sub_field( 'logo' ); ?>" />
+                                        </div>
+                                        <?php } ?>
+                                        <div class="last-news-title"><?php the_sub_field( 'title' ); ?></div>
+                                        <div class="last-news-description"><?php the_sub_field( 'content' ); ?></div>
+                                        <?php $link = get_sub_field( 'link' ); ?>
+                                        <?php if ( $link ) { ?>
+                                            <a href="<?php echo $link; ?>" class="btn btn-outline-secondary btn-round last-news-btn">Read More</a>
+                                        <?php } ?>
+                                    </div>
+                                    <img src="<?php the_sub_field( 'imagen' ); ?>" width="100%" alt="">
+                                </div>
+                            <?php endwhile; ?>
+                        <?php else : ?>
+                            <?php // no rows found ?>
+                        <?php endif; ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+
             </div>
         </div>
     </section>

@@ -41,25 +41,6 @@ Template Name: Products Private Labels
         </div>
     </section>
 
-    <script>
-
-
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            var position = $('#sticky-buttons').position();
-             // console.log( position);
-            if (position.top > 600 && position.top < 1829) {
-                $('#sticky-buttons').addClass('on-sticky-buttons');
-            } else {
-                $('#sticky-buttons').removeClass('on-sticky-buttons');
-            }
-            if(position.top > 1829){
-                $('#sticky-buttons').addClass('sticky-buttons-trans');
-            }else if(position.top < 2000){
-                $('#sticky-buttons').removeClass('sticky-buttons-trans');
-            }
-        });
-    </script>
 
     <section class="superfood-consumer my-5" id="superfoods">
         <div class="container">
@@ -175,25 +156,29 @@ Template Name: Products Private Labels
                                                                 <tr>
                                                                     <td><?php the_sub_field( 'name_product' ); ?></td>
                                                                     <td><?php the_sub_field( 'country_origin' ); ?></td>
-                                                                    <?php // type ( value )
-                                                                    $type_array = get_sub_field( 'type' );
-                                                                    if ( $type_array ):
-                                                                        foreach ( $type_array as $type_item ): ?>
-                                                                            <?php if ($type_item == 'organic'): ?>
-                                                                            <td> <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
-                                                                            <?php endif; ?>
-                                                                            <?php if ($type_item == 'kosher'): ?>
-                                                                                <td> <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
-                                                                            <?php endif; ?>
-                                                                            <?php if ($type_item == 'vegan'): ?>
-                                                                                <td> <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
-                                                                            <?php endif; ?>
-                                                                            <?php if ($type_item == 'raw'): ?>
-                                                                                <td> <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i> </td>
-                                                                            <?php endif; ?>
-                                                                        <?php endforeach;
-                                                                    endif; ?>
+
+                                                                    <?php if ( get_sub_field( 'organic' ) == 1 ) { ?>
+                                                                    <td>  <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i></td>
+                                                                    <?php } else { ?>
+                                                                    <td> - </td>
+                                                                    <?php } ?>
+                                                                    <?php if ( get_sub_field( 'kosher' ) == 1 ) {?>
+                                                                    <td>  <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i></td>
+                                                                    <?php } else { ?>
+                                                                    <td> - </td>
+                                                                    <?php } ?>
+                                                                    <?php if ( get_sub_field( 'vegan' ) == 1 ) {?>
+                                                                    <td>  <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i></td>
+                                                                    <?php } else { ?>
+                                                                    <td> - </td>
+                                                                    <?php } ?>
+                                                                    <?php if ( get_sub_field( 'raw' ) == 1 ) { ?>
+                                                                    <td>  <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i></td>
+                                                                    <?php } else { ?>
+                                                                    <td> - </td>
+                                                                    <?php } ?>
                                                                 </tr>
+
                                                             <?php endwhile; ?>
 
                                                         <?php else : ?>
@@ -323,6 +308,22 @@ Template Name: Products Private Labels
                     }
                 }
             });
+        });
+
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            var position = $('#sticky-buttons').position();
+            // console.log( position);
+            if (position.top > 600 && position.top < 1829) {
+                $('#sticky-buttons').addClass('on-sticky-buttons');
+            } else {
+                $('#sticky-buttons').removeClass('on-sticky-buttons');
+            }
+            if(position.top > 1829){
+                $('#sticky-buttons').addClass('sticky-buttons-trans');
+            }else if(position.top < 2000){
+                $('#sticky-buttons').removeClass('sticky-buttons-trans');
+            }
         });
 
 
