@@ -53,6 +53,14 @@
 
 <!-- Seccion header-->
 <header>
+    <?php
+    //LINK BASE
+    $link = $_SERVER['PHP_SELF'];
+    $file = basename($_SERVER['PHP_SELF']);
+    $base = str_replace($file, "", $link);
+
+    ?>
+
     <div class="col-12 search-container" id="search-bar" style="display: none">
         <div class="container">
             <form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
@@ -74,13 +82,29 @@
                 if ( is_singular( 'products' ) ) {
                     //echo '<img class="icon-logo-header" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
                 }else{
-                    echo '<img class="icon-logo-header" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
-                    $style = 'navbar-black';
-                    $color = '#1b1b1b';
+                    if ( $file == 'about-us' ) {
+                        echo '<img class="icon-logo-header polvo-1" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
+                        $style = 'navbar-black';
+                        $color = '#1b1b1b';
+                    }
+                    if ( $file == 'private-label' ) {
+                        echo '<img class="icon-logo-header polvo-2" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
+                        $style = 'navbar-black';
+                        $color = '#1b1b1b';
+                    }
+                    if ( $file == 'contact-us' ) {
+                        echo '<img class="icon-logo-header polvo-3" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
+                        $style = 'navbar-black';
+                        $color = '#1b1b1b';
+                    }
+                    if ( $file == 'index.php' ) {
+                        echo '<img class="icon-logo-header" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
+                        $style = 'navbar-black';
+                        $color = '#1b1b1b';
+                    }
                 }
                 ?>
             </a>
-
 
             <button data-toggle="collapse" id="responsive_menu" class="navbar-toggler" data-target="#navcol-1" style="color: <?php echo $color ?>">
                 <i class="fas fa-bars"></i>

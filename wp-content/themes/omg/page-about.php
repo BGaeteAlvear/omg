@@ -11,7 +11,7 @@ Template Name: About Us Page
 
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="title-about-us blue f-300">ABOUT <b class="f-700">US</b></h1>
+                    <h1 class="title-about-us blue f-300 img-header-about">ABOUT <b class="f-700">US</b></h1>
                 </div>
                 <div class="col-md-6">
                     <p class="content-p p-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -24,7 +24,7 @@ Template Name: About Us Page
                 </div>
                 <div class="col-md-6 " style="margin-top: 9%">
                     <h3 class="f-300 blue title-54">EXPERISE</h3>
-                    <p class="content-p">Headquartered in Los Angeles, California. OMG Superfoods
+                    <p class="content-p about-us-right-img">Headquartered in Los Angeles, California. OMG Superfoods
                         specializes in sourcing and manufacturing Organic Superfoods. We
                         began business in 2010 as the leading importer of Maqui Berry
                         from Chile and have grown by partnering with national and regional
@@ -64,11 +64,11 @@ Template Name: About Us Page
 
             <div class="row">
                 <div class="col-md-6 p-4 mt-4 text-center">
-                    <img style="clip-path: circle(50% at 50% 50%); width: 65%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-about-us-2GIT.jpg" alt="">
+                    <img style="clip-path: circle(50% at 50% 50%); width: 65%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-about-us-2.jpg" alt="">
                 </div>
                 <div class="col-md-6 " style="margin-top: 9%">
                     <h3 class="f-300 blue title-54">DIRECT SOURCING</h3>
-                    <p class="content-p">We cultivate direct and sustainable sourcing relationships with
+                    <p class="content-p about-us-left-img">We cultivate direct and sustainable sourcing relationships with
                         farmers across the globe, including Peru, India, Mexico, Chile, and
                         others. This ensures we are able to offer a consistent supply of the
                         highest quality ingredients at competitive prices.</p>

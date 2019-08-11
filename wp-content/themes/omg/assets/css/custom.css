@@ -1616,7 +1616,7 @@ table.table.table-products tr:nth-child(even) {
 }
 
 
-.col-md-7.px-5.content-product-img:after{
+.content-product-img:after{
     display: inline-block;
     height: 500px;
     width: 500px;
@@ -1630,7 +1630,7 @@ table.table.table-products tr:nth-child(even) {
     z-index: -1;
 }
 
-.col-md-7.px-5.content-product-img:before{
+.content-product-img:before{
     display: inline-block;
     height: 500px;
     width: 500px;
@@ -1644,3 +1644,59 @@ table.table.table-products tr:nth-child(even) {
     z-index: -1;
 }
 
+img.icon-logo-header.polvo-1:after{
+    display: inline-block;
+    height: 500px;
+    width: 500px;
+    margin-right: 5px;
+    content: "";
+    background: url(../images/semilla-right.png) no-repeat 0 0;
+    background-size: 500px 500px;
+    position: absolute;
+    left: -5%;
+    top: -6%;
+    z-index: 100;
+}
+
+
+.about-us-right-img:before{
+    display: inline-block;
+    height: 500px;
+    width: 500px;
+    margin-right: 5px;
+    content: "";
+    background: url(../images/about-us-polvo-right.png) no-repeat 0 0;
+    background-size: 500px 500px;
+    position: absolute;
+    right: -80%;
+    top: -36%;
+    z-index: -1;
+}
+
+.about-us-left-img:after{
+    display: inline-block;
+    height: 500px;
+    width: 500px;
+    margin-right: 5px;
+    content: "";
+    background: url(../images/about-us-polvo-left.png) no-repeat 0 0;
+    background-size: 500px 500px;
+    position: absolute;
+    left: -196%;
+    top: -66%;
+    z-index: -1;
+}
+
+.img-header-about:after{
+    display: inline-block;
+    height: 500px;
+    width: 500px;
+    margin-right: 5px;
+    content: "";
+    background: url(../images/polvo-header.png) no-repeat 0 0;
+    background-size: 450px 500px;
+    position: absolute;
+    right: -6%;
+    top: -415%;
+    z-index: 1030;
+}
