@@ -826,7 +826,6 @@ input:focus, textarea:focus {
 .carousel-control-next-icon, .carousel-control-prev-icon {
     width: 20px;
     height: 20px;
-    border: 3px solid #fff;
     border-radius: 100%;
     padding: 20px;
 }
@@ -915,6 +914,7 @@ input#search {
 
 .icon-logo-header {
     width: 100px;
+    margin-left: -20px;
 }
 
 .img-polvo {
@@ -1110,10 +1110,10 @@ div#wpcf7-f9-p16-o1 {
 }
 
 .menu-responsive-active {
-    background: #057236 !important;
+    background: #fffffff7 !important;
 }
 .menu-responsive-active i{
-    color: white !important;
+    color: #121212 !important;
 }
 
 .menu-responsive-disable {
@@ -1313,6 +1313,7 @@ span.wpcf7-not-valid-tip {
 img.p-5.img-private-label {
     position: absolute;
     top: -161px;
+    width: 95%;
 }
 
 img.altalena-logo-omg {
@@ -1467,7 +1468,8 @@ table.table.table-products tr:nth-child(even) {
 }
 
 .card-header {
-    padding: .75rem 0rem!important;
+    padding: .15rem 0rem!important;
+    margin-bottom: 10px !important;
 }
 
 
@@ -1591,12 +1593,12 @@ table.table.table-products tr:nth-child(even) {
     transition: 0.3s;
     position: relative;
     color: white;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
     border: solid white 2px;
-    width: 148px;
+    width: 160px;
     margin-top: 17px;
-    padding: 7px 38px!important;
+    padding: 13px 38px!important;
 }
 
 .last-news:hover .last-news-content .last-news-btn{
@@ -1618,14 +1620,14 @@ table.table.table-products tr:nth-child(even) {
 
 .content-product-img:after{
     display: inline-block;
-    height: 500px;
-    width: 500px;
+    height: 499px;
+    width: 250px;
     margin-right: 5px;
     content: "";
     background: url(../images/semilla-right.png) no-repeat 0 0;
-    background-size: 500px 500px;
+    background-size: 250px 500px;
     position: absolute;
-    right: -80%;
+    right: -40%;
     top: -36%;
     z-index: -1;
 }
@@ -1662,13 +1664,13 @@ img.icon-logo-header.polvo-1:after{
 .about-us-right-img:before{
     display: inline-block;
     height: 500px;
-    width: 500px;
+    width: 250px;
     margin-right: 5px;
     content: "";
     background: url(../images/about-us-polvo-right.png) no-repeat 0 0;
-    background-size: 500px 500px;
+    background-size: 250px 500px;
     position: absolute;
-    right: -80%;
+    right: -47%;
     top: -36%;
     z-index: -1;
 }
@@ -1690,13 +1692,109 @@ img.icon-logo-header.polvo-1:after{
 .img-header-about:after{
     display: inline-block;
     height: 500px;
-    width: 500px;
+    width: 442px;
     margin-right: 5px;
     content: "";
     background: url(../images/polvo-header.png) no-repeat 0 0;
-    background-size: 450px 500px;
+    background-size: 394px 500px;
     position: absolute;
-    right: -6%;
+    right: 6%;
     top: -415%;
     z-index: 1030;
+}
+
+.img-header-private:after{
+    display: inline-block;
+    height: 500px;
+    width: 442px;
+    margin-right: 5px;
+    content: "";
+    background: url(../images/label-header-2.png) no-repeat 0 0;
+    background-size: 418px 500px;
+    position: absolute;
+    right: 6%;
+    top: -273%;
+    z-index: 1030;
+}
+
+.img-header-contact:after{
+    display: inline-block;
+    height: 500px;
+    width: 442px;
+    margin-right: 5px;
+    content: "";
+    background: url(../images/label-header-3.png) no-repeat 0 0;
+    background-size: 418px 500px;
+    position: absolute;
+    right: 51%;
+    top: -500%;
+    z-index: 1030;
+}
+
+ul.carousel-indicators-custom {
+    display: flex;
+    list-style: none;
+    padding-top: 3%;
+    padding-bottom: 4%;
+ }
+
+.controls-slider{
+    margin: 5% 5%;
+    text-align: center;
+    position: relative;
+}
+
+.number-work.active {
+    padding: 7px 14px;
+    background-color: white;
+    color: #0e3450;
+    border-radius: 36px;
+    font-weight: 700;
+}
+
+.number-work {
+    padding: 7px 14px;
+    color: white;
+    border-radius: 36px;
+    border: solid 2px white;
+    width: 30px;
+}
+
+.number-step:nth-child(n+2):nth-child(-n+4) {
+    margin-left: 24%;
+}
+
+.number-work:nth-child(n+2):nth-child(-n+4) :after{
+    display: block;
+    content: "";
+    width: 29.9%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 49%;
+    left: 1%;
+    pointer-events: none;
+}
+
+.descrition-step {
+    margin-top: 15px;
+    color: #ffffff85;
+    font-size: 12px;
+}
+
+.content-principal-home{
+    margin-top: -500px;
+}
+
+.img-altalena{
+    width: 100%;
+}
+
+.img-circle{
+    clip-path: circle(50% at 50% 50%);
+    width: 65%;
+}
+
+.certifications-img{
+    width: 60%;
 }

@@ -14,22 +14,14 @@ Template Name: About Us Page
                     <h1 class="title-about-us blue f-300 img-header-about">ABOUT <b class="f-700">US</b></h1>
                 </div>
                 <div class="col-md-6">
-                    <p class="content-p p-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                        volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                        ullamcorper suscipit lobortis.</p>
+                    <p class="content-p p-3"><?php the_field( 'about_us' ); ?></p>
                 </div>
                 <div class="col-md-6 p-4 mt-4 text-center">
-                    <img style="clip-path: circle(50% at 50% 50%); width: 65%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-about-us.jpg" alt="">
+                    <img class="img-circle circle-1" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-about-us.jpg" alt="">
                 </div>
                 <div class="col-md-6 " style="margin-top: 9%">
-                    <h3 class="f-300 blue title-54">EXPERISE</h3>
-                    <p class="content-p about-us-right-img">Headquartered in Los Angeles, California. OMG Superfoods
-                        specializes in sourcing and manufacturing Organic Superfoods. We
-                        began business in 2010 as the leading importer of Maqui Berry
-                        from Chile and have grown by partnering with national and regional
-                        retailers to successfully launch products in over 10,000 points of
-                        sale in the US market.</p>
+                    <h3 class="f-300 blue title-54">EXPERTISE</h3>
+                    <p class="content-p about-us-right-img"><?php the_field( 'expertise' ); ?></p>
                 </div>
             </div>
         </div>
@@ -43,9 +35,7 @@ Template Name: About Us Page
                         <h3 class="white f-300 title-54 pl-2 pb-3">INNOVATION</h3>
 
                         <p class="content-p white col-8 no-gutters">
-                            At OMG Superfoods, we stay at the forefront of new
-                            trends and have the ability to rapidly offer new and
-                            innovative products to our clients.
+                            <?php the_field( 'direct_sourcing' ); ?>
                         </p>
                     </div>
                 </div>
@@ -64,7 +54,7 @@ Template Name: About Us Page
 
             <div class="row">
                 <div class="col-md-6 p-4 mt-4 text-center">
-                    <img style="clip-path: circle(50% at 50% 50%); width: 65%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-about-us-2.jpg" alt="">
+                    <img class="img-circle" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-about-us-2.jpg" alt="">
                 </div>
                 <div class="col-md-6 " style="margin-top: 9%">
                     <h3 class="f-300 blue title-54">DIRECT SOURCING</h3>

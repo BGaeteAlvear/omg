@@ -103,6 +103,14 @@
         $(this).removeClass('active');
     });
 
+    function activeSearch(){
+        $('#search-bar').addClass('bounceInDown').show();
+    }
+
+    function closeSearch() {
+        $('#search-bar').addClass('bounceInUp').hide();
+    }
+
 
 
 

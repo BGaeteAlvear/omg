@@ -10,16 +10,29 @@ Template Name: Contact Us Page
 
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="title-private-label-page blue f-300">GET  <b class="f-700">IN TOUCH</b></h1>
+                    <h1 class="title-private-label-page blue f-300 img-header-contact">GET  <b class="f-700">IN TOUCH</b></h1>
                 </div>
                 <div class="col-md-9 mb-5">
                     <div class="place row">
                         <div class="col-md-6">
-                            <span><i class="fa fa-map-marker" aria-hidden="true"></i><h5 class="f-300"><b class="f-700">2373 E. Pacifica Place</b> ,<br>Rancho Dominguez, CA, 90220.</h5></span>
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <i class="fa fa-map-marker font-30" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-10">
+                                    <h5 class="f-300"><b class="f-700">2373 E. Pacifica Place</b> ,<br>Rancho Dominguez, CA, 90220.</h5>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6">
-                            <span><i class="fa fa-volume-control-phone" aria-hidden="true"></i><h5 class="f-300"><b class="f-700">855-OMG-FOOD</b> ,<br>(664-3663)</h5>
-                        </span>
+                            <div class="row">
+                                <div class="col-xs-2">
+                                    <i class="fa fa-volume-control-phone font-30" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-10">
+                                    <h5 class="f-300"><b class="f-700">855-OMG-FOOD</b> ,<br>(664-3663)</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

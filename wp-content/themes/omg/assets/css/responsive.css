@@ -30,9 +30,66 @@
 		margin-top: -10px;
 		margin-bottom: 10px;
 	}
+
+	.content-product-img:after {
+		display: inline-block;
+		height: 400px;
+		width: 215px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/semilla-right.png) no-repeat 0 0;
+		background-size: 223px 400px;
+		position: absolute;
+		right: -23%;
+		top: -14%;
+		z-index: -1;
+	}
+
+	.about-us-right-img:before {
+		display: inline-block;
+		height: 400px;
+		width: 200px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/about-us-polvo-right.png) no-repeat 0 0;
+		background-size: 240px 400px;
+		position: absolute;
+		right: -27%;
+		top: -59%;
+		z-index: -1;
+	}
 }
 
 @media (max-width: 1200px) {
+
+	.about-us-right-img:before {
+		display: inline-block;
+		height: 300px;
+		width: 164px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/about-us-polvo-right.png) no-repeat 0 0;
+		background-size: 200px 300px;
+		position: absolute;
+		right: -6%;
+		top: -51%;
+		z-index: -1;
+	}
+
+	.content-product-img:after {
+		display: inline-block;
+		height: 300px;
+		width: 128px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/semilla-right.png) no-repeat 0 0;
+		background-size: 223px 300px;
+		position: absolute;
+		right: -8%;
+		top: -14%;
+		z-index: -1;
+	}
+
 	.btn {
 		padding: 12px 40px;
 		font-size: 12px;
@@ -67,6 +124,10 @@
 		line-height: 1;
 	}
 
+	.content-principal-home{
+		margin-top: -430px;
+	}
+
 }
 
 
@@ -74,6 +135,52 @@
 	.carousel-control-next, .carousel-control-prev {
 		width: 30px !important;
 		opacity: .65 !important;
+	}
+
+	.content-principal-home{
+		margin-top: -390px;
+	}
+
+	.img-header-private:after {
+		display: inline-block;
+		height: 300px;
+		width: 300px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/label-header-2.png) no-repeat 0 0;
+		background-size: 300px 300px;
+		position: absolute;
+		right: 14%;
+		top: -167%;
+		z-index: 1030;
+	}
+
+	.img-header-about:after {
+		display: inline-block;
+		height: 300px;
+		width: 300px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/polvo-header.png) no-repeat 0 0;
+		background-size: 300px 300px;
+		position: absolute;
+		right: 16%;
+		top: -125%;
+		z-index: 1030;
+	}
+
+	.img-header-contact:after {
+		display: inline-block;
+		height: 300px;
+		width: 300px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/label-header-3.png) no-repeat 0 0;
+		background-size: 300px 300px;
+		position: absolute;
+		right: 57%;
+		top: -289%;
+		z-index: 1030;
 	}
 
 	a.carousel-control-prev.slick-control-prev.slick-arrow {
@@ -162,9 +269,101 @@
 		padding-right: 10%;
 	}
 
+	img.p-5.img-private-label {
+		position: absolute;
+		top: -48px;
+		width: 95%;
+	}
+
 }
 
 @media (max-width: 768px) {
+
+	.content-product-img:after {
+		display: inline-block;
+		height: 300px;
+		width: 128px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/semilla-right.png) no-repeat 0 0;
+		background-size: 223px 300px;
+		position: absolute;
+		right: -14%;
+		top: -14%;
+		z-index: -1;
+	}
+
+	.content-product-img:before {
+		display: inline-block;
+		height: 400px;
+		width: 400px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/polvo-left.png) no-repeat 0 0;
+		background-size: 400px 400px;
+		position: absolute;
+		left: -145%;
+		top: -40%;
+		z-index: -1;
+	}
+
+	img.p-5.img-private-label {
+		position: absolute;
+		top: -12px;
+		width: 492px;
+		left: -55px;
+	}
+
+
+	.last-news-btn {
+
+		font-size: 14px;
+		font-weight: bold;
+		border: solid white 2px;
+		width: 136px;
+		margin-top: 17px;
+		padding: 8px 31px!important;
+	}
+
+	.last-news-description {
+		position: relative;
+		z-index: 2;
+		color: white;
+		font-weight: lighter;
+		font-size: 14px;
+		margin-top: -7%;
+		width: 84%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+		transition: 0.3s;
+		line-height: 1.4;
+	}
+
+	.last-news-title {
+		position: relative;
+		z-index: 2;
+		color: white;
+		margin-top: 196%;
+		font-weight: 800;
+		font-size: 24px;
+		width: 67%;
+		margin-left: 38px;
+		margin-right: auto;
+		line-height: 1;
+		transition: 0.3s;
+	}
+
+	.text-header h3 {
+		font-size: 54px;
+		color: white;
+		font-weight: 300;
+		line-height: .9;
+	}
+
+	.content-principal-home{
+		margin-top: -380px;
+	}
 
 	.clients-say {
 		min-height: 250px !important;
@@ -237,8 +436,119 @@
 		text-align: center;
 	}
 
+	.box-category h5 {
+		position: relative;
+		padding: 2%;
+		bottom: -65%;
+		color: white;
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	.img-header-private:after {
+		display: inline-block;
+		height: 300px;
+		width: 300px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/label-header-2.png) no-repeat 0 0;
+		background-size: 300px 300px;
+		position: absolute;
+		right: 14%;
+		top: -220%;
+		z-index: 1030;
+	}
+
+	.img-header-contact:after {
+		display: inline-block;
+		height: 200px;
+		width: 200px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/label-header-3.png) no-repeat 0 0;
+		background-size: 200px 200px;
+		position: absolute;
+		right: 61%;
+		top: -317%;
+		z-index: 1030;
+	}
+
+
+	img.img-brand-about-us.pull-right {
+		width: 158%;
+		position: relative;
+		top: 44%;
+	}
+
+	.title-about-us {
+		font-size: 82px;
+	}
+
+	.img-header-about:after {
+		display: inline-block;
+		height: 200px;
+		width: 200px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/polvo-header.png) no-repeat 0 0;
+		background-size: 200px 200px;
+		position: absolute;
+		right: 16%;
+		top: -137%;
+		z-index: 1030;
+	}
+
+	.about-us-left-img:after {
+		display: inline-block;
+		height: 300px;
+		width: 300px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/about-us-polvo-left.png) no-repeat 0 0;
+		background-size: 300px 300px;
+		position: absolute;
+		left: -161%;
+		top: -21%;
+		z-index: -1;
+	}
+
+	.about-us-right-img:before {
+		display: inline-block;
+		height: 256px;
+		width: 120px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/about-us-polvo-right.png) no-repeat 0 0;
+		background-size: 171px 300px;
+		position: absolute;
+		right: -8%;
+		top: -51%;
+		z-index: -1;
+	}
+
+	.title-private-label-page {
+		font-size: 82px;
+		line-height: 1;
+	}
+
+	a.btn.btn-blue.btn-round {
+		border: 2px solid;
+		width: 100%;
+		text-align: center;
+		padding: 9px 4px;
+		margin-top: 38%;
+	}
+
+	.number-step:nth-child(n+2):nth-child(-n+4) {
+		margin-left: 14%;
+	}
+
+	.carousel-item.active {
+		min-height: 166px!important;
+	}
+
 	img.logo-footer {
-		width: 380px;
+		width: 280px;
 		padding: 44px;
 	}
 
@@ -289,6 +599,81 @@
 }
 
 @media (max-width: 425px) {
+
+	img.p-5.img-private-label {
+		position: absolute;
+		top: -33px;
+		width: 445px;
+		left: -55px;
+	}
+
+	.img-altalena {
+		width: 100%;
+		position: relative;
+		top: 84%;
+	}
+
+	.content-principal-home {
+		margin-top: -293px;
+	}
+
+	text-header h3 {
+		font-size: 29px;
+		color: white;
+		font-weight: 300;
+		line-height: .9;
+	}
+
+	.title-omg-brands-home {
+		font-size: 42px;
+		font-weight: 300;
+	}
+
+	.title-omg-brands-home b {
+		font-size: 42px;
+		font-weight: 600;
+	}
+
+	.text-header h3 {
+		font-size: 28px;
+		color: white;
+		font-weight: 300;
+		line-height: .9;
+	}
+
+	ul#menu-menu-principal-2 {
+		display: block;
+	}
+
+	.col-12.border-bottom-black {
+		padding-right: 3rem;
+	}
+
+	.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+		content: "\f0c9";
+		color: black;
+	}
+
+	.icon-logo-header {
+		width: 100px;
+		margin-left: 10px;
+	}
+
+	.title-private-label {
+		font-size: 42px;
+	}
+
+	.meet-omg-title {
+		font-size: 43px;
+		font-weight: 300;
+		line-height: .9;
+		padding-bottom: 10px;
+	}
+
+	.nav-link {
+		display: block;
+		padding: .2rem 1rem;
+	}
 
 	.certfications-elem{
 		margin-top: 20px;
@@ -443,7 +828,104 @@
 	ul#menu-menu-principal li a,
 	ul#menu-menu-principal li a i
 	{
-		color: white!important;
+		color: #121212 !important;
+	}
+
+	.navigation-clean.navbar .navbar-nav .nav-link {
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-top: 35px;
+	}
+
+	.last-news-title {
+		position: relative;
+		z-index: 2;
+		color: white;
+		margin-top: 167%;
+		font-weight: 800;
+		font-size: 24px;
+		width: 67%;
+		margin-left: 38px;
+		margin-right: auto;
+		line-height: 1;
+		transition: 0.3s;
+	}
+
+	.last-news-description {
+		line-height: 1.9;
+	}
+
+	img.img-brand-about-us.pull-right {
+		width: 88%;
+		position: relative;
+		top: -22%;
+		left: -5%;
+	}
+
+	.about-us-right-img:before {
+		right: -1%;
+	}
+
+	.img-header-about:after {
+		display: inline-block;
+		height: 200px;
+		width: 200px;
+		margin-right: 5px;
+		content: "";
+		background: url(../images/polvo-header.png) no-repeat 0 0;
+		background-size: 200px 200px;
+		position: absolute;
+		right: 16%;
+		top: -237%;
+		z-index: 1030;
+	}
+
+	.title-about-us {
+		font-size: 52px;
+		margin-top: 69px;
+	}
+
+	.col-ajust{
+		width: 100% !important;
+	}
+
+	.sticky-buttons{
+		display: none;
+	}
+
+	.title-54 {
+		font-size: 36px;
+	}
+
+	.number-step:nth-child(n+2):nth-child(-n+4) {
+		margin-left: 10%;
+	}
+
+	th {
+		font-size: 12px;
+	}
+
+	td {
+		font-size: 12px;
+	}
+
+	.fa-circle:before {
+		content: "\f111";
+		font-size: 11px;
+	}
+
+	.title-private-label-page {
+		font-size: 52px;
+		line-height: 1;
+		margin-top: 55px;
+	}
+
+	.img-header-private:after {
+		top: -299%;
+	}
+
+	img.img-circle.circle-1 {
+		margin-top: 50px;
 	}
 
 	.nav.nav-footer {
@@ -452,6 +934,16 @@
 		/* margin-left: -15px; */
 		width: 100%;
 		margin: 0 auto;
+	}
+
+	p.content-p.white.text-justify.px-5.consumer-text {
+		width: 100%;
+		padding: 0px!important;
+	}
+
+	p.content-p.p-3 {
+		position: relative;
+		bottom: -41px!important;
 	}
 
 	img.logo-footer {
@@ -469,8 +961,28 @@
 		padding: 44px;
 	}
 
+
+	.box-category h5 {
+		padding-left: 34%;
+		padding-right: 34%;
+	}
+
 	h2.extrabold.font-100.pl-md-5 {
 		font-size: 57px!important;
+	}
+
+	.certifications-img {
+		width: 100%;
+	}
+
+	table {
+		display: block;
+		overflow-x: auto;
+	}
+
+	img.img-paking {
+		height: 90%;
+		padding-bottom: 3%;
 	}
 
 	.col-md-4.text-white {
@@ -603,9 +1115,23 @@
 		padding: 18px;
 		width: 100%;
 	}
+	img.pt-4.pl-4 {
+		margin-bottom: 11%;
+	}
+	ul.controls-slider {
+		margin-left: -60px;
+		padding-top: 5%;
+	}
 }
 
 @media (max-width: 375px){
+
+	.controls-slider {
+		margin-left: -78px;
+		margin-top: 20px;
+		text-align: center;
+		position: relative;
+	}
 
 	a.carousel-control-prev.slick-control-prev.slick-arrow {
 		left: 170px !important;
@@ -646,6 +1172,22 @@
 		padding: 18px;
 		width: 100%;
 	}
+
+	img.p-5.img-private-label {
+		position: absolute;
+		top: -33px;
+		width: 382px;
+		left: -55px;
+	}
+
+	.col-12.border-bottom-black {
+		padding-right: 4rem;
+	}
+
+	.box-category h5 {
+		font-size: 27px;
+	}
+
 }
 
 @media (max-width: 320px){
@@ -664,8 +1206,31 @@
 		margin-left: 0%;
 	}
 
+	.controls-slider {
+		/* margin: 5% 5%; */
+		margin-left: -98px;
+		margin-top: 20px;
+		text-align: center;
+		position: relative;
+	}
+
 	.form-contact-container {
 		padding: 0px;
+	}
+
+	.title-54 {
+		font-size: 30px;
+	}
+	.certifications-img{
+		width: 130%;
+		margin-left: -15%;
+	}
+
+	p.content-p.white.text-justify.px-5.consumer-text {
+		width: 155%;
+		text-align: left!important;
+		margin-left: -10px;
+		padding: 0px!important;
 	}
 
 	.text-404 {
@@ -758,6 +1323,26 @@
 		margin-top: -57px;
 		padding: 18px;
 		width: 100%;
+	}
+
+	img.p-5.img-private-label {
+		position: absolute;
+		top: -33px;
+		width: 340px;
+		left: -55px;
+	}
+
+	.last-news-title {
+		margin-top: 176%;
+	}
+
+	.col-md-7.px-5.content-product-img {
+		padding: 0em!important;
+	}
+
+	.box-category h5 {
+		padding-left: 33%;
+		padding-right: 33%;
 	}
 }
 

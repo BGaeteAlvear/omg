@@ -35,7 +35,7 @@ Template Name: Home Page
             <!--div class="col-12 bg-header-slide pb-0 mb-0"></div-->
 
             <div class="col-12">
-                <div class="text-center" style="margin-top: -500px;">
+                <div class="text-center content-principal-home">
                     <img style="width: 120px; margin-top: -100px;"
                          src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/omg-home-logo.svg" alt="">
                     <div class="text-header" style="color:white;">
@@ -118,7 +118,7 @@ Template Name: Home Page
                         <?php if ( have_rows( 'brand' ) ) : ?>
                             <?php while ( have_rows( 'brand' ) ) : the_row(); ?>
 
-                                <div class="col-6 col-md-4 mb-4 mb-md-0 last-news">
+                                <div class="col-xs-12 col-md-4 mb-4 mb-md-0 last-news">
                                     <div class="black-velo-in-col fix-bug"></div>
                                     <div class="last-news-content">
                                         <?php if ( get_sub_field( 'logo' ) ) { ?>
@@ -169,7 +169,7 @@ Template Name: Home Page
                     <a href="" class="btn btn-white-inverter mt-3">Read More</a>
                 </div>
                 <div class="col-md-7">
-                    <img class="p-5 img-private-label" style="width: 95%"
+                    <img class="p-5 img-private-label"
                          src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/envaces.png"
                          alt="private-label">
                 </div>
@@ -183,7 +183,7 @@ Template Name: Home Page
         <div class="container p-5">
             <div class="row">
                 <div class="col-md-7">
-                    <img class="p-5" style="width: 100%"
+                    <img class="p-5 img-altalena"
                          src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/altalena-home.png"
                          alt="omg-altalena-product">
                 </div>

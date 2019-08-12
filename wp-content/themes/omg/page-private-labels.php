@@ -10,13 +10,11 @@ Template Name: Products Private Labels
 
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="title-private-label-page blue f-300">PRIVATE <b class="f-700">LABEL</b></h1>
+                    <h1 class="title-private-label-page blue f-300 img-header-private">PRIVATE <b class="f-700">LABEL</b></h1>
                 </div>
                 <div class="col-md-6" style="bottom: 0%">
-                    <p class="content-p p-3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                        volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                        ullamcorper suscipit lobortis.</p>
+                    <p class="content-p p-3">
+                        <?php the_field( 'private_label' ); ?>
                 </div>
             </div>
         </div>
@@ -48,7 +46,9 @@ Template Name: Products Private Labels
                 <div class="p-5 col-12 mb-0 text-white text-center pb-5" style="bottom:0;position:absolute;">
                     <div class="pl-md-5 text-center col-10 offset-md-1">
                         <h3 class="title-54 white f-300">SUPERFOODS <b class="f-700">CONSUMER</b></h3>
-                        <p class="content-p white text-justify px-5">Consumers of Superfoods are constantly seeking new and better ways to incorporate healthy, nutrient-dense products into their daily lives. OMG Superfoods understands this mentality and is able to partner with retailers to meet customers demands.</p>
+                        <p class="content-p white text-justify px-5 consumer-text">
+                            <?php the_field( 'superfoods_consumer' ); ?>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -59,27 +59,28 @@ Template Name: Products Private Labels
         <div class="container text-center">
             <h3 class="title-54 f-300 blue pt-5">OUR PRODUCTS IN <br><b class="f-700">YOUR CATEGORIES</b></h3>
             <div class="row py-3">
-                <div class="col px-2">
+
+                <div class="col col-ajust px-2">
                     <div class="box-category zoom" style="background-color: #874C66">
                         <h5>Vitamins & Supplements</h5>
                     </div>
                 </div>
-                <div class="col px-2">
+                <div class="col col-ajust px-2">
                     <div class="box-category zoom" style="background-color: #689A54">
                        <h5>Health & Wellness</h5>
                     </div>
                 </div>
-                <div class="col px-2">
+                <div class="col col-ajust px-2">
                     <div class="box-category zoom" style="background-color: #B84652;">
                         <h5>Baking & Cooking</h5>
                     </div>
                 </div>
-                <div class="col px-2">
+                <div class="col col-ajust px-2">
                     <div class="box-category zoom" style="background-color: #C88044">
                         <h5>Seeds & Grains</h5>
                     </div>
                 </div>
-                <div class="col px-2">
+                <div class="col col-ajust px-2">
                     <div class="box-category zoom" style="background-color: #4988AD">
                         <h5>Herbs & Spices</h5>
                     </div>
@@ -90,7 +91,129 @@ Template Name: Products Private Labels
 
     <section class="bg-blue contact-form no-gutters mb-5" id="as-easy">
         <div class="container p-5">
-            <div class="row text-left">
+            <div class="row text-center">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h3 class=" title-private-label white f-300 mt-2">AS <b class="f-700">EASY AS</b></h3>
+                    </div>
+                </div>
+                <div class="col-12 ">
+                    <ul class="controls-slider">
+                        <ul class="carousel-indicators-custom">
+                            <li class="number-step active "id="carousel-selector-1">
+                                <span class="number-work">1</span>
+                                <div class="descrition-step ">
+                                    PRODUCT
+                                </div>
+                            </li>
+                            <li class="number-step" id="carousel-selector-2">
+                                <span class="number-work">2</span>
+                                <div class="descrition-step ">
+                                    PACKING
+                                </div>
+                            </li>
+                            <li class="number-step">
+                                <span class="number-work" id="carousel-selector-3">3</span>
+                                <div class="descrition-step ">
+                                    DESING
+                                </div>
+                            </li>
+                            <li class="number-step">
+                                <span class="number-work" id="carousel-selector-4">4</span>
+                                <div class="descrition-step ">
+                                    SCOPE OF WORK
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--div class="controls-step pull-left">
+                        <ul class="carousel-indicators-custom">
+                            <li><button class="step-buttom" id="carousel-selector-1" type="button">1</button></li>
+                            <li><button class="step-buttom" id="carousel-selector-2" type="button">2</button></li>
+                            <li><button class="step-buttom" id="carousel-selector-3" type="button">3</button></li>
+                            <li><button class="step-buttom" id="carousel-selector-4" type="button">4</button></li>
+                        </ul>
+                    </div-->
+
+
+                    <div id="my-carousel-id" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <?php if ( have_rows( 'as_easy_as' ) ) : ?>
+                                <?php $i = 1 ?>
+                                <?php while ( have_rows( 'as_easy_as' ) ) : the_row(); ?>
+                                    <?php if ( get_sub_field( 'image' ) ) { ?>
+                                        <div class="carousel-item <?php if($i == 1 ) { ?>active <?php } ?>">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img style="width: 60%" class="pt-4 pl-4" src="<?php the_sub_field( 'image' ); ?>" alt="" class="svg-img">
+                                                </div>
+                                                <div class="col-md-8 text-left">
+                                                    <h5 class="white pb-4 pl-3"><?php the_sub_field( 'title' ); ?></h5>
+                                                    <p class="content-p white col-10">
+                                                        <?php the_sub_field( 'description' ); ?>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+
+                                    <?php $i ++ ?>
+                                <?php endwhile; ?>
+                            <?php else : ?>
+                                <?php // no rows found ?>
+                            <?php endif; ?>
+
+                            <!--div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="width: 60%"  class="pt-4 pl-4"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/polvo_blanco.svg" alt="" class="svg-img">
+                                    </div>
+                                    <div class="col-md-8 text-left">
+                                        <h5 class="white pb-4 pl-3">2. Product</h5>
+                                        <p class="content-p white col-10">
+                                            Select the product(s) you are interested in from our list of available items for a quote. The OMG team will work with you to determine the best sie and line-up for your customers.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="width: 60%"  class="pt-4 pl-4"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/polvo_blanco.svg" alt="" class="svg-img">
+                                    </div>
+                                    <div class="col-md-8 text-left">
+                                        <h5 class="white pb-4 pl-3">3. Product</h5>
+                                        <p class="content-p white col-10">
+                                            Select the product(s) you are interested in from our list of available items for a quote. The OMG team will work with you to determine the best sie and line-up for your customers.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img style="width: 60%"  class="pt-4 pl-4"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/polvo_blanco.svg" alt="" class="svg-img">
+                                    </div>
+                                    <div class="col-md-8 text-left">
+                                        <h5 class="white pb-4 pl-3">4. Product</h5>
+                                        <p class="content-p white col-10">
+                                            Select the product(s) you are interested in from our list of available items for a quote. The OMG team will work with you to determine the best sie and line-up for your customers.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div-->
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -206,28 +329,28 @@ Template Name: Products Private Labels
                     PACKAGING
                 </h3>
                 <div class="row">
-                    <div class="col-md-2">
-                        <img class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg1.png"" alt="">
+                    <div class="col-lg-2">
+                        <img class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg1.png" alt="">
                         <h5 class="description-paking white f-300"> <b>STAND-UP GUSSETED POUCH </b>CUSTOM PRINTED </h5>
                     </div>
-                    <div class="col-md-2">
-                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg2.png"" alt="">
+                    <div class="col-lg-2 col-md-6">
+                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg2.png" alt="">
                         <h5 class="description-paking white f-300"> <b>STAND-UP GUSSETED POUCH </b>GENERIC WITH LABEL </h5>
                     </div>
-                    <div class="col-md-2 pl-5">
-                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg3.png"" alt="">
+                    <div class="col-lg-2 col-md-6 pl-5">
+                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg3.png" alt="">
                         <h5 class="description-paking white f-300"> <b>STICK <br> PACK </b></h5>
                     </div>
-                    <div class="col-md-2 pl-5 ">
-                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg4.png"" alt="">
+                    <div class="col-lg-2 col-md-6 pl-5 ">
+                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg4.png" alt="">
                         <h5 class="description-paking white f-300"> <b>PLASTIC <br> TUBES</b> </h5>
                     </div>
-                    <div class="col-md-2">
-                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg5.png"" alt="">
+                    <div class="col-lg-2 col-md-6">
+                        <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg5.png" alt="">
                         <h5 class="description-paking white f-300"> <b>PET <br>CANISTER</b> </h5>
                     </div>
-                    <div class="col-md-2">
-                        <img class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg6.png"" alt="">
+                    <div class="col-lg-2 col-md-6">
+                        <img class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg6.png" alt="">
                         <h5 class="description-paking white f-300"> <b>RETAIL <br>READY TRAY </b></h5>
                     </div>
                 </div>
@@ -243,10 +366,13 @@ Template Name: Products Private Labels
                         CERTIFICATIONS
                     </h3>
                     <div class="col-md-8 offset-md-2 text-center mb-5">
-                        <p class="content-p text-justify">Every OMG product is certified USDA Organic and Kosher.  We are able to expand to offer Project non-GMO Certification as well as other certifications that are required by your consumers.  All of our products are produced in GFSI audited facilities.</p>
+                        <p class="content-p text-justify">
+                            Every OMG product is certified USDA Organic and Kosher.  We are able to expand to offer Project non-GMO Certification as well as other certifications that are required by your consumers.  All of our products are produced in GFSI audited facilities.
+                            <?php the_field( 'certifications' ); ?>
+                        </p>
                     </div>
                     <div class="col-md-12 text-center pb-5">
-                        <img style="width: 60%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/certifications.png" alt="certifications">
+                        <img class="certifications-img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/certifications.png" alt="certifications">
                     </div>
 
                 </div>
@@ -261,7 +387,9 @@ Template Name: Products Private Labels
     <section class="bg-blue contact-form no-gutters mb-5">
         <div class="container p-5">
             <div class="row text-left">
-                <h3 class=" title-private-label white f-300 mt-2">CONTACT <b class="f-700">US</b></h3>
+                <div class="col-12">
+                    <h3 class=" title-private-label white f-300 mt-2">CONTACT <b class="f-700">US</b></h3>
+                </div>
             </div>
             <div class="no-gutters"  >
                 <div class="my-5">
@@ -295,35 +423,56 @@ Template Name: Products Private Labels
             }
         });
 
-        $(function () {
+        /*$(function () {
             $('a[href*="#"]:not([href="#"])').click(function () {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     if (target.length) {
                         $('html, body').animate({
-                            scrollTop: target.offset().top
+                            scrollTop: target.offset().top -200
                         }, 1000);
                         return false;
                     }
                 }
             });
+        });*/
+
+        $( "a.btn-blue" ).click(function( event ) {
+            event.preventDefault();
+            console.log();
+            var elem = $(this).attr("href");
+            var header = $(elem).offset().top -200;
+             $("html, body").animate({ scrollTop: header}, 1000);
+
+
         });
 
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
             var position = $('#sticky-buttons').position();
             // console.log( position);
-            if (position.top > 600 && position.top < 1829) {
+            if (position.top > 490 && position.top < 3829) {
                 $('#sticky-buttons').addClass('on-sticky-buttons');
             } else {
                 $('#sticky-buttons').removeClass('on-sticky-buttons');
             }
-            if(position.top > 1829){
+            if(position.top > 3829){
                 $('#sticky-buttons').addClass('sticky-buttons-trans');
-            }else if(position.top < 2000){
+            }else if(position.top < 4000){
                 $('#sticky-buttons').removeClass('sticky-buttons-trans');
             }
+        });
+
+        $(document).ready(function(){
+            $('.carousel').carousel();
+            $('[id^=carousel-selector-]').click( function(){
+                var id_selector = $(this).attr("id");
+                var id = id_selector.substr(id_selector.length -1);
+                id = parseInt(id);
+                console.log(id);
+                $('#my-carousel-id').carousel(id - 1);
+            });
         });
 
 
