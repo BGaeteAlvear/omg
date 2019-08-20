@@ -80,28 +80,11 @@
             <a class="navbar-brand" href="<?php echo get_home_url() ?>">
                 <?php
                 if ( is_singular( 'products' ) ) {
-                    //echo '<img class="icon-logo-header" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
+                    echo '<img class="icon-logo-header" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
                 }else{
-                    if ( $file == 'about-us' ) {
-                        echo '<img class="icon-logo-header polvo-1" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
-                        $style = 'navbar-black';
-                        $color = '#1b1b1b';
-                    }
-                    if ( $file == 'private-label' ) {
-                        echo '<img class="icon-logo-header polvo-2" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
-                        $style = 'navbar-black';
-                        $color = '#1b1b1b';
-                    }
-                    if ( $file == 'contact-us' ) {
-                        echo '<img class="icon-logo-header polvo-3" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
-                        $style = 'navbar-black';
-                        $color = '#1b1b1b';
-                    }
-                    if ( $file == 'index.php' ) {
-                        echo '<img class="icon-logo-header" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
-                        $style = 'navbar-black';
-                        $color = '#1b1b1b';
-                    }
+                    echo '<img class="icon-logo-header polvo-3" src="' . get_stylesheet_directory_uri() . '/assets/images/logo-black.svg">';
+                    $style = 'navbar-black';
+                    $color = '#1b1b1b';
                 }
                 ?>
             </a>

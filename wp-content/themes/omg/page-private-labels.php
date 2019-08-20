@@ -44,7 +44,7 @@ Template Name: Products Private Labels
         <div class="container">
             <div class="header-bg pb-5" style="background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)),url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/superfood-consumer.jpg);">
                 <div class="p-5 col-12 mb-0 text-white text-center pb-5" style="bottom:0;position:absolute;">
-                    <div class="pl-md-5 text-center col-10 offset-md-1">
+                    <div class="pl-md-5 text-center col-md-10 col-sm-12 offset-md-1">
                         <h3 class="title-54 white f-300">SUPERFOODS <b class="f-700">CONSUMER</b></h3>
                         <p class="content-p white text-justify px-5 consumer-text">
                             <?php the_field( 'superfoods_consumer' ); ?>
@@ -97,46 +97,40 @@ Template Name: Products Private Labels
                         <h3 class=" title-private-label white f-300 mt-2">AS <b class="f-700">EASY AS</b></h3>
                     </div>
                 </div>
-                <div class="col-12 ">
-                    <ul class="controls-slider">
-                        <ul class="carousel-indicators-custom">
-                            <li class="number-step active "id="carousel-selector-1">
-                                <span class="number-work">1</span>
-                                <div class="descrition-step ">
+                <div class="col-12 container-slider">
+
+                    <div class="pointer-ball">
+                        <ul class="carousel-indicators-2">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" id="number-1" class="number-step active">
+                                <span class="number-work active" id="carousel-selector-1">1</span>
+                                <div class="descrition-step active">
                                     PRODUCT
                                 </div>
                             </li>
-                            <li class="number-step" id="carousel-selector-2">
-                                <span class="number-work">2</span>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1" id="number-2" class="number-step">
+                                <span class="number-work" id="carousel-selector-2">2</span>
                                 <div class="descrition-step ">
                                     PACKING
                                 </div>
                             </li>
-                            <li class="number-step">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2" id="number-3" class="number-step">
                                 <span class="number-work" id="carousel-selector-3">3</span>
                                 <div class="descrition-step ">
-                                    DESING
+                                    DESIGN
                                 </div>
                             </li>
-                            <li class="number-step">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3" id="number-4" class="number-step">
                                 <span class="number-work" id="carousel-selector-4">4</span>
                                 <div class="descrition-step ">
                                     SCOPE OF WORK
                                 </div>
                             </li>
+
                         </ul>
                     </div>
-                    <!--div class="controls-step pull-left">
-                        <ul class="carousel-indicators-custom">
-                            <li><button class="step-buttom" id="carousel-selector-1" type="button">1</button></li>
-                            <li><button class="step-buttom" id="carousel-selector-2" type="button">2</button></li>
-                            <li><button class="step-buttom" id="carousel-selector-3" type="button">3</button></li>
-                            <li><button class="step-buttom" id="carousel-selector-4" type="button">4</button></li>
-                        </ul>
-                    </div-->
 
 
-                    <div id="my-carousel-id" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
 
                             <?php if ( have_rows( 'as_easy_as' ) ) : ?>
@@ -145,12 +139,12 @@ Template Name: Products Private Labels
                                     <?php if ( get_sub_field( 'image' ) ) { ?>
                                         <div class="carousel-item <?php if($i == 1 ) { ?>active <?php } ?>">
                                             <div class="row">
-                                                <div class="col-md-4">
-                                                    <img style="width: 60%" class="pt-4 pl-4" src="<?php the_sub_field( 'image' ); ?>" alt="" class="svg-img">
+                                                <div class="col-md-4 col-sm-12">
+                                                    <img style="height: 130px" class="pt-4 pl-4" src="<?php the_sub_field( 'image' ); ?>" alt="" class="svg-img">
                                                 </div>
-                                                <div class="col-md-8 text-left">
+                                                <div class="col-md-8 col-sm-12 text-left">
                                                     <h5 class="white pb-4 pl-3"><?php the_sub_field( 'title' ); ?></h5>
-                                                    <p class="content-p white col-10">
+                                                    <p class="content-p white col-md-10 col-sm-12">
                                                         <?php the_sub_field( 'description' ); ?>
                                                     </p>
                                                 </div>
@@ -164,45 +158,7 @@ Template Name: Products Private Labels
                                 <?php // no rows found ?>
                             <?php endif; ?>
 
-                            <!--div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img style="width: 60%"  class="pt-4 pl-4"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/polvo_blanco.svg" alt="" class="svg-img">
-                                    </div>
-                                    <div class="col-md-8 text-left">
-                                        <h5 class="white pb-4 pl-3">2. Product</h5>
-                                        <p class="content-p white col-10">
-                                            Select the product(s) you are interested in from our list of available items for a quote. The OMG team will work with you to determine the best sie and line-up for your customers.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img style="width: 60%"  class="pt-4 pl-4"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/polvo_blanco.svg" alt="" class="svg-img">
-                                    </div>
-                                    <div class="col-md-8 text-left">
-                                        <h5 class="white pb-4 pl-3">3. Product</h5>
-                                        <p class="content-p white col-10">
-                                            Select the product(s) you are interested in from our list of available items for a quote. The OMG team will work with you to determine the best sie and line-up for your customers.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img style="width: 60%"  class="pt-4 pl-4"  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/polvo_blanco.svg" alt="" class="svg-img">
-                                    </div>
-                                    <div class="col-md-8 text-left">
-                                        <h5 class="white pb-4 pl-3">4. Product</h5>
-                                        <p class="content-p white col-10">
-                                            Select the product(s) you are interested in from our list of available items for a quote. The OMG team will work with you to determine the best sie and line-up for your customers.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div-->
+
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -470,6 +426,46 @@ Template Name: Products Private Labels
                 var id_selector = $(this).attr("id");
                 var id = id_selector.substr(id_selector.length -1);
                 id = parseInt(id);
+                if (id == 1){
+                    $('#number-1').addClass('active');
+                    $('#carousel-selector-1').addClass('active');
+                    $('#number-2').removeClass('active');
+                    $('#carousel-selector-2').removeClass('active');
+                    $('#number-3').removeClass('active');
+                    $('#carousel-selector-3').removeClass('active');
+                    $('#number-4').removeClass('active');
+                    $('#carousel-selector-4').removeClass('active');
+                }
+                if (id == 2){
+                    $('#number-1').addClass('active');
+                    $('#carousel-selector-1').addClass('active');
+                    $('#number-2').addClass('active');
+                    $('#carousel-selector-2').addClass('active');
+                    $('#number-3').removeClass('active');
+                    $('#carousel-selector-3').removeClass('active');
+                    $('#number-4').removeClass('active');
+                    $('#carousel-selector-4').removeClass('active');
+                }
+                if (id == 3){
+                    $('#number-1').addClass('active');
+                    $('#carousel-selector-1').addClass('active');
+                    $('#number-2').addClass('active');
+                    $('#carousel-selector-2').addClass('active');
+                    $('#number-3').addClass('active');
+                    $('#carousel-selector-3').addClass('active');
+                    $('#number-4').removeClass('active');
+                    $('#carousel-selector-4').removeClass('active');
+                }
+                if (id == 4){
+                    $('#number-1').addClass('active');
+                    $('#carousel-selector-1').addClass('active');
+                    $('#number-2').addClass('active');
+                    $('#carousel-selector-2').addClass('active');
+                    $('#number-3').addClass('active');
+                    $('#carousel-selector-3').addClass('active');
+                    $('#number-4').addClass('active');
+                    $('#carousel-selector-4').addClass('active');
+                }
                 console.log(id);
                 $('#my-carousel-id').carousel(id - 1);
             });

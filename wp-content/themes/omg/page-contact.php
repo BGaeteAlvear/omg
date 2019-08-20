@@ -19,7 +19,7 @@ Template Name: Contact Us Page
                                 <div class="col-xs-2">
                                     <i class="fa fa-map-marker font-30" aria-hidden="true"></i>
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-10 text-contact">
                                     <h5 class="f-300"><b class="f-700">2373 E. Pacifica Place</b> ,<br>Rancho Dominguez, CA, 90220.</h5>
                                 </div>
                             </div>
@@ -29,7 +29,7 @@ Template Name: Contact Us Page
                                 <div class="col-xs-2">
                                     <i class="fa fa-volume-control-phone font-30" aria-hidden="true"></i>
                                 </div>
-                                <div class="col-md-10">
+                                <div class="col-md-10 text-contact">
                                     <h5 class="f-300"><b class="f-700">855-OMG-FOOD</b> ,<br>(664-3663)</h5>
                                 </div>
                             </div>

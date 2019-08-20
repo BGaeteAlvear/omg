@@ -12,8 +12,8 @@ Template Name: Home Page
         <div class="carousel-inner" role="listbox">
 
             <div class="carousel-item active ">
-                <div class="black-velo"></div>
-                <img class="d-block w-100 cover" style="background-image:linear-gradient(rgba(0,0,0,2), rgba(0,0,0,2))"
+                <!--div class="black-velo"></div-->
+                <img class="d-block w-100 cover"
                      alt="omg" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/img-home-header.jpg"
                      data-holder-rendered="true" style="margin-top: -90px;">
             </div>
@@ -62,8 +62,12 @@ Template Name: Home Page
             </div>
 
             <script>
+                var widthW =  $(window).width();
+                var tablet = 992;
 
+                if (widthW>tablet){
                 $('#menu-principal').hide();
+                $('#menu-menu-principal-1').show();
 
                 $(window).scroll(function () {
                     var scroll = $(window).scrollTop();
@@ -78,25 +82,26 @@ Template Name: Home Page
                         $('#menu-principal').slideDown();
                         $('.fixed-top').addClass('navbar-white');
                     }
-                });
+                });}else{
+                    $('#menu-menu-principal-1').hide();
+                }
             </script>
 
         </div>
     </section>
 
 
-    <section class="no-gutters meet-omg mt-5 p-5 mb-5">
+    <section class="no-gutters meet-omg mt-5 ">
         <div class="container">
             <div class="row">
 
                 <div class="col-md-5">
-                    <h3 class="meet-omg-title blue">Meet OMG! <br>
-                        <b>Food Company</b></h3>
+
                 </div>
                 <div class="col-md-7 px-5 content-product-img">
                     <?php if ( have_rows( 'meet_omg!_food_company' ) ) : ?>
                         <?php while ( have_rows( 'meet_omg!_food_company' ) ) : the_row(); ?>
-                            <p class="content-p"><?php the_sub_field( 'meet_omg!_food_company' ); ?></p>
+                            <p class="content-p"></p>
                             <?php $buttom_all_products = get_sub_field( 'buttom_all_products' ); ?>
                             <?php if ( $buttom_all_products ) { ?>
                                 <a class="btn btn-primary btn-lg btn-round mt-5" href="<?php echo $buttom_all_products; ?>">ALL PRODUCTS</a>
@@ -114,16 +119,18 @@ Template Name: Home Page
             <div class="row">
 
                 <?php if ( have_rows( 'omg_brands' ) ) : ?>
+                    <?php $i = 0; ?>
                     <?php while ( have_rows( 'omg_brands' ) ) : the_row(); ?>
                         <?php if ( have_rows( 'brand' ) ) : ?>
                             <?php while ( have_rows( 'brand' ) ) : the_row(); ?>
+                                <?php $i ++; ?>
 
                                 <div class="col-xs-12 col-md-4 mb-4 mb-md-0 last-news">
                                     <div class="black-velo-in-col fix-bug"></div>
                                     <div class="last-news-content">
                                         <?php if ( get_sub_field( 'logo' ) ) { ?>
                                         <div class="last-news-date font-9 uppercase">
-                                            <img src="<?php the_sub_field( 'logo' ); ?>" />
+                                            <img style="<?php if($i!=3){ ?>width: 90px; margin-bottom: 1%;<?php }else{ ?> width: 154px;margin-top: 14%; <?php } ?>" src="<?php the_sub_field( 'logo' ); ?>" />
                                         </div>
                                         <?php } ?>
                                         <div class="last-news-title"><?php the_sub_field( 'title' ); ?></div>
