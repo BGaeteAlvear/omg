@@ -180,8 +180,8 @@ Template Name: Products Private Labels
                 OUR <b class="f-700">PRODUCTS</b>
             </h3>
             <div class="row">
-                <div class="accordion col-12 py-5" id="accordion">
-                    <div class="card col-12 pb-2">
+                <div class="accordion  col-12 py-5" id="accordion">
+                    <div class="card col-12 pb-2 panel-group">
 
                         <?php
                         $taxonomy = 'category';
@@ -192,10 +192,17 @@ Template Name: Products Private Labels
 
                                 <?php if($term->slug !='sin-categoria'){ ?>
                                 <?php $color = get_field('color', 'term_' . $term->term_id); ?>
-                                    <div class="card-header" id="headingOne" style="background-color: <?php echo $color ?>">
+                                    <div class="card-header panel-heading" id="headingOne" style="background-color: <?php echo $color ?>">
                                         <h2 class="mb-0 white f-700">
-                                            <button class="btn btn-link pull-left white font-18" type="button" data-toggle="collapse" data-target="#<?php echo $term->slug; ?>" aria-expanded="true" aria-controls="<?php echo $term->slug; ?>">
-                                                <?php echo $term->name; ?>
+                                            <button class="btn btn-link w-100 pull-left white font-18 bt-collap" type="button" data-toggle="collapse" data-target="#<?php echo $term->slug; ?>" aria-expanded="true" aria-controls="<?php echo $term->slug; ?>">
+                                                <div class="row">
+                                                    <div class="pull-left text-left col-11">
+                                                        <?php echo $term->name; ?>
+                                                    </div>
+                                                    <div class="pull-right text-right">
+                                                        <i class=" more-less fa fa-plus "></i>
+                                                    </div>
+                                                </div>
                                             </button>
                                         </h2>
                                     </div>
@@ -214,7 +221,7 @@ Template Name: Products Private Labels
                                         )
                                     ); ?>
                                     <div id="<?php echo $term->slug; ?>" class="collapse accordeon-elem collapsed" aria-labelledby="<?php echo $term->slug; ?>" data-parent="#accordion">
-                                        <i class="more-less glyphicon glyphicon-plus"></i>
+
                                         <div class="card-body">
                                             <table class="table table-products px-0">
                                                 <thead>
@@ -406,14 +413,11 @@ Template Name: Products Private Labels
 
         });
 
-        function toggleIcon(e) {
-            $(e.target)
-                .prev('.panel-heading')
-                .find(".more-less")
-                .toggleClass('glyphicon-plus glyphicon-minus');
-        }
-        $('.panel-group').on('hidden.bs.collapse', toggleIcon);
-        $('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+        $('.bt-collap').click(function () {
+            $(this).find('.more-less').toggleClass('fa-plus fa-minus');
+        });
+
 
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();

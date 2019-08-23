@@ -2013,3 +2013,18 @@ input#inputSearch:focus {
     background-color: #b42b2b;
     transition: all 0.2s ease-in;
 }
+
+
+.carousel-control-prev-icon {
+    background-image: url(../images/arrow-left.svg);
+}
+
+.carousel-control-next-icon {
+    background-image: url(../images/arrow-right_1.svg);
+}
+
+.pull-right.text-right {
+    position: relative;
+    top: 6px;
+    left: 57px;
+}
