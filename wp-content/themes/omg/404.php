@@ -13,7 +13,7 @@ Template Name: 404
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800,900">
-    <title>Altalena 404 | Not found</title>
+    <title>OMG! 404 | Not found</title>
 
 
     <style>
@@ -99,7 +99,7 @@ Template Name: 404
     <div class="">
         <a class="navbar-brand" href="<?php echo get_home_url() ?>">
             <img class="icon-logo-header" width="120px"
-                 src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/resourses/icon-header.svg">
+                 src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo omg.png">
         </a>
         <div style="">
             <div class="text-center" style="display: flex;">

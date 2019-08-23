@@ -115,7 +115,9 @@ Template Name: Home Page
 
     <section class="our-brand mt-4 mb-5">
         <div class="container">
-            <h3 class="title-omg-brands-home blue">OMG! <b>BRANDS</b></h3>
+            <div class="text-center">
+                <h3 class="title-omg-brands-home blue">OMG! <b>BRANDS</b></h3>
+            </div>
             <div class="row">
 
                 <?php if ( have_rows( 'omg_brands' ) ) : ?>
@@ -195,13 +197,13 @@ Template Name: Home Page
                          alt="omg-altalena-product">
                 </div>
                 <div class="col-md-5 pt-5">
-                    <img style="width: 40%;" class="altalena-logo-omg pb-2"
+                    <img style="width: 50%;" class="altalena-logo-omg pb-2"
                          src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/altalena-logo.svg"
                          alt="omg-altalena-logo">
                     <p class="content-p mt-4">Looking for bulk materials? Our sister company, Altalena, offers the
                         finest ingredients with a focus on organic superfoods that are imported directly from their
                         sources. </p>
-                    <a href="" class="btn btn-black-inverter mt-3">Read More</a>
+                    <a href="https://www.altalenawholesale.com" target="_blank" class="btn btn-black-inverter mt-3">Read More</a>
                 </div>
             </div>
         </div>

@@ -24,16 +24,16 @@ Template Name: Products Private Labels
         <div class="container px-5">
             <div class="row">
                 <div class="col-md-3 px-3">
-                    <a href="#superfoods" class="btn btn-blue btn-round active">SuperFood Consumer</a>
+                    <a href="#superfoods" class="btn btn-blue menu-sticky btn-round active">SuperFood Consumer</a>
                 </div>
                 <div class="col-md-3 px-3">
-                    <a href="#as-easy" class="btn btn-blue btn-round">As easy as 1.2.3.4</a>
+                    <a href="#as-easy" class="btn btn-blue menu-sticky btn-round">As easy as 1.2.3.4</a>
                 </div>
                 <div class="col-md-3 px-3">
-                    <a href="#our-products" class="btn btn-blue btn-round">Our Products</a>
+                    <a href="#our-products" class="btn btn-blue menu-sticky btn-round">Our Products</a>
                 </div>
                 <div class="col-md-3 px-3">
-                    <a href="#packaging" class="btn btn-blue btn-round">Packaging</a>
+                    <a href="#packaging" class="btn btn-blue menu-sticky btn-round">Packaging</a>
                 </div>
             </div>
         </div>
@@ -91,13 +91,13 @@ Template Name: Products Private Labels
 
     <section class="bg-blue contact-form no-gutters mb-5" id="as-easy">
         <div class="container p-5">
-            <div class="row text-center">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <h3 class=" title-private-label white f-300 mt-2">AS <b class="f-700">EASY AS</b></h3>
-                    </div>
+            <div class="row ">
+
+                <div class="col-12 text-center">
+                    <h3 class=" title-private-label white f-300 mt-2">AS <b class="f-700">EASY AS</b></h3>
                 </div>
-                <div class="col-12 container-slider">
+
+                <div class="col-12 container-slider text-center">
 
                     <div class="pointer-ball">
                         <ul class="carousel-indicators-2">
@@ -180,7 +180,7 @@ Template Name: Products Private Labels
                 OUR <b class="f-700">PRODUCTS</b>
             </h3>
             <div class="row">
-                <div class="accordion col-12 py-5" id="accordionExample">
+                <div class="accordion col-12 py-5" id="accordion">
                     <div class="card col-12 pb-2">
 
                         <?php
@@ -213,13 +213,14 @@ Template Name: Products Private Labels
                                             )
                                         )
                                     ); ?>
-                                    <div id="<?php echo $term->slug; ?>" class="collapse show" aria-labelledby="<?php echo $term->slug; ?>" data-parent="#accordionExample">
+                                    <div id="<?php echo $term->slug; ?>" class="collapse accordeon-elem collapsed" aria-labelledby="<?php echo $term->slug; ?>" data-parent="#accordion">
+                                        <i class="more-less glyphicon glyphicon-plus"></i>
                                         <div class="card-body">
                                             <table class="table table-products px-0">
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">PRODUCTS</th>
-                                                        <th scope="col">COUNTRY OF ORIGIN</th>
+
                                                         <th scope="col">ORGANIC</th>
                                                         <th scope="col">KOSHER</th>
                                                         <th scope="col">VEGAN</th>
@@ -234,7 +235,6 @@ Template Name: Products Private Labels
                                                             <?php while ( have_rows( 'products' ) ) : the_row(); ?>
                                                                 <tr>
                                                                     <td><?php the_sub_field( 'name_product' ); ?></td>
-                                                                    <td><?php the_sub_field( 'country_origin' ); ?></td>
 
                                                                     <?php if ( get_sub_field( 'organic' ) == 1 ) { ?>
                                                                     <td>  <i class="fa fa-circle" style="color :#A9BD5C" aria-hidden="true"></i></td>
@@ -303,7 +303,7 @@ Template Name: Products Private Labels
                     </div>
                     <div class="col-lg-2 col-md-6">
                         <img  class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg5.png" alt="">
-                        <h5 class="description-paking white f-300"> <b>PET <br>CANISTER</b> </h5>
+                        <h5 class="description-paking white f-300"> <b>HDPE <br>CANISTER</b> </h5>
                     </div>
                     <div class="col-lg-2 col-md-6">
                         <img class="img-paking" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pkg6.png" alt="">
@@ -396,13 +396,24 @@ Template Name: Products Private Labels
 
         $( "a.btn-blue" ).click(function( event ) {
             event.preventDefault();
+            $('.menu-sticky').removeClass('active');
             console.log();
             var elem = $(this).attr("href");
-            var header = $(elem).offset().top -200;
+            $(this).addClass('active');
+            var header = $(elem).offset().top -170;
              $("html, body").animate({ scrollTop: header}, 1000);
 
 
         });
+
+        function toggleIcon(e) {
+            $(e.target)
+                .prev('.panel-heading')
+                .find(".more-less")
+                .toggleClass('glyphicon-plus glyphicon-minus');
+        }
+        $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+        $('.panel-group').on('shown.bs.collapse', toggleIcon);
 
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();

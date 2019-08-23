@@ -32,23 +32,23 @@ if (function_exists('add_theme_support'))
 //		'Menu footer' => 'Menu footer',
 //	));
 
-function my_mod_search($query) {
+/*function my_mod_search($query) {
     if ($query->is_search()) {
         $query->query_vars['order'] = 'ASC';
         $query->query_vars['orderby'] = 'post_date';
         $query->query_vars['post_type'] = 'products';
         $query->query_vars['posts_per_page'] = 200;
     }
-}
+}*
 
-add_action('parse_query', 'my_mod_search');
+add_action('parse_query', 'my_mod_search');*/
 
 function template_chooser($template)
 {
     global $wp_query;
 //    $wp_query->set('posts_per_page', 100);
     $post_type = get_query_var('post_type');
-    if( $wp_query->is_search && $post_type == 'products' )
+    if( $wp_query->is_search)
     {
         return locate_template('search.php');  //  redirect to archive-search.php
     }
@@ -168,8 +168,8 @@ function products()
         'show_in_nav_menus' => true,
         'can_export' => true,
         'has_archive' => false,
-        'exclude_from_search' => false,
-        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'publicly_queryable' => false,
         'capability_type' => 'page',
     );
     register_post_type('products', $args);

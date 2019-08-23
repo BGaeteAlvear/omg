@@ -114,8 +114,45 @@
 <!--                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">CONTACT US</a></li>-->
 
                 <ul class="nav navbar-nav ml-auto  <?php  echo $style ?>">
-                    <li class="nav-item" role="presentation"><div class="nav-link" onclick="activeSearch();"><i class="fas fa-search"></i></div></li>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <form class="navbar-form navbar-right navbar-form-search" role="search" action="<?php echo site_url('/'); ?>" method="get">
+                            <div class="search-form-container hdn" id="search-input-container">
+                                <div class="search-input-group">
+                                    <button type="button" class="btn btn-default close-search" id="hide-search-input-container"><span class="fas fa-times" aria-hidden="true"></span>
+                                    </button>
+                                    <div class="form-group">
+                                        <!--input type="search" class="form-control search-input" placeholder="Search for..."-->
+                                        <input type="search" class="form-control search-input" placeholder="<?php echo esc_attr_x( 'Search', 'placeholder', 'base' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!--button type="submit" class="btn btn-default" id="search-button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button-->
+                        </form>
+                    </div>
+                    <li class="nav-item" role="presentation"><div class="nav-link" id="search-button" ><i class="fas fa-search"></i></div></li>
                 </ul>
+                    <div class="d-xl-none d-lg-none d-md-none d-sm-block-d-xs-block">
+                        <form class="navbar-form navbar-right navbar-form-search" role="search" action="<?php echo site_url('/'); ?>" method="get">
+                            <div class="search-form-container-mobile" id="search-input-container">
+                                <div class="input-group search-mobile">
+                                    </button>
+                                    <div class="form-group">
+                                        <!--input type="search" class="form-control search-input" placeholder="Search for..."-->
+                                        <input type="search" class="form-control col-12 search-input-mobile" placeholder="<?php echo esc_attr_x( 'Search', 'placeholder', 'base' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!--button type="submit" class="btn btn-default" id="search-button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button-->
+                        </form>
+                    </div>
             </div>
         </div>
     </div>
@@ -142,6 +179,25 @@
         $('#menu-principal').addClass('menu-responsive-active-transition');
     });
 
+
+    // search
+    (function($) {
+
+        $('#search-button').on('click', function(e) {
+            if($('#search-input-container').hasClass('hdn')) {
+                e.preventDefault();
+                $('#search-input-container').removeClass('hdn')
+                return false;
+            }
+        });
+
+        $('#hide-search-input-container').on('click', function(e) {
+            e.preventDefault();
+            $('#search-input-container').addClass('hdn')
+            return false;
+        });
+
+    })(jQuery);
 
 
 </script>
