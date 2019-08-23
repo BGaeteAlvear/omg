@@ -35,7 +35,7 @@ Template Name: About Us Page
                         <h3 class="white f-300 title-54 pl-2 pb-3">INNOVATION</h3>
 
                         <p class="content-p white col-md-8 col-sm-12 no-gutters">
-                            <?php the_field( 'direct_sourcing' ); ?>
+                            <?php the_field( 'innovation' ); ?>
                         </p>
                     </div>
                 </div>
@@ -58,10 +58,7 @@ Template Name: About Us Page
                 </div>
                 <div class="col-md-6 movil-p" style="margin-top: 9%">
                     <h3 class="f-300 blue title-54">DIRECT SOURCING</h3>
-                    <p class="content-p about-us-left-img">We cultivate direct and sustainable sourcing relationships with
-                        farmers across the globe, including Peru, India, Mexico, Chile, and
-                        others. This ensures we are able to offer a consistent supply of the
-                        highest quality ingredients at competitive prices.</p>
+                    <p class="content-p about-us-left-img"><?php the_field( 'direct_sourcing' ); ?></p>
                 </div>
             </div>
         </div>

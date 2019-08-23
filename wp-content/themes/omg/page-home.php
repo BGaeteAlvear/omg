@@ -172,10 +172,9 @@ Template Name: Home Page
                 <div class="col-md-5">
                     <h3 class=" title-private-label f-300">PRIVATE <b class="f-700">LABEL</b></h3>
                     <p class="content-p white f-300">
-                        OMG! Food Company can help your company design and launch its own Private Brand by tapping into
-                        our expertise in package design, product sourcing, and production capabilities.
+                        <?php the_field( 'text_private_label' ); ?>
                     </p>
-                    <a href="" class="btn btn-white-inverter mt-3">Read More</a>
+                    <a href="<?php the_field( 'buttom_private' ); ?>" class="btn btn-white-inverter mt-3">Read More</a>
                 </div>
                 <div class="col-md-7">
                     <img class="p-5 img-private-label"
@@ -200,10 +199,15 @@ Template Name: Home Page
                     <img style="width: 50%;" class="altalena-logo-omg pb-2"
                          src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/altalena-logo.svg"
                          alt="omg-altalena-logo">
-                    <p class="content-p mt-4">Looking for bulk materials? Our sister company, Altalena, offers the
-                        finest ingredients with a focus on organic superfoods that are imported directly from their
-                        sources. </p>
-                    <a href="https://www.altalenawholesale.com" target="_blank" class="btn btn-black-inverter mt-3">Read More</a>
+                    <p class="content-p mt-4">
+                        <?php the_field( 'text_altalena' ); ?>
+                    </p>
+
+                    <?php $buttom_altalena = get_field( 'buttom_altalena' ); ?>
+                    <?php if ( $buttom_altalena ) { ?>
+                        <a href="<?php echo $buttom_altalena; ?>" target="_blank" class="btn btn-black-inverter mt-3">Read More</a>
+                    <?php } ?>
+
                 </div>
             </div>
         </div>
